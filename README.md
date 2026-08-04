@@ -12,6 +12,18 @@
 
 ---
 
+### 📊 GitHub Analytics
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=XTEAMCEO&theme=radical&hide_border=true" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=XTEAMCEO&theme=radical&no-frame=true&no-bg=true&row=1&column=7" />
+</p>
+
+---
+
 ### 🔗 Let's Connect With Me
 
 <p align="center">
