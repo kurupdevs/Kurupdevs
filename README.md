@@ -1,6 +1,6 @@
-<h2 align="center">
-  ʜɪ ɪ'ᴍ ᴋᴜʀᴜᴘᴅᴇᴠꜱ, ᴀ ᴛᴇᴄʜ ᴇɴᴛʜᴜꜱɪᴀꜱᴛ ꜰʀᴏᴍ ɪɴᴅᴏʀᴇ, ɪɴᴅɪᴀ
-</h2>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=39FF14&center=true&vCenter=true&width=700&lines=Hi+I'm+Kurupdevs+%F0%9F%9A%80;A+Tech+Enthusiast+from+Indore%2C+India" alt="Typing SVG" />
+</p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/XTEAMCEO/Kurupdevsss/main/52c367cbb1c50a33e2b351c3f0d2e328.jpg" width="220" style="border-radius: 50%;" />
@@ -12,7 +12,7 @@
 
 ---
 
-### 📊 GitHub Analytics
+###  GitHub Analytics ( ah)
 
 <p align="center">
   <img src="https://streak-stats.demolab.com/?user=XTEAMCEO&theme=radical&hide_border=true" />
@@ -24,7 +24,7 @@
 
 ---
 
-### 🔗 Let's Connect With Me
+### Let's Connect With Me, yey
 
 <p align="center">
   <a href="https://github.com/XTEAMCEO">
@@ -46,7 +46,7 @@
 
 ---
 
-### 🧑‍💻 Languages & Tools I Usually Use
+###  Languages & Tools I Usually Use
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
