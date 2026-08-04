@@ -1,18 +1,24 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=39FF14&center=true&vCenter=true&width=700&lines=Hi+I'm+Kurupdevs+%F0%9F%9A%80;A+Tech+Enthusiast+from+Indore%2C+India" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=32&duration=2800&pause=1200&color=00F5FF&center=true&vCenter=true&multiline=true&width=800&height=100&lines=Hi+I'm+Kurupdevs+%F0%9F%9A%80;Tech+Enthusiast+%7C+Indore%2C+India" alt="Typing SVG" />
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/XTEAMCEO/Kurupdevsss/main/52c367cbb1c50a33e2b351c3f0d2e328.jpg" width="220" style="border-radius: 50%;" />
+  <img src="https://raw.githubusercontent.com/XTEAMCEO/Kurupdevsss/main/52c367cbb1c50a33e2b351c3f0d2e328.jpg" width="210" style="border-radius: 50%; border: 3px solid #00F5FF;" />
 </p>
 
-- ɪ'ᴍ ᴄᴜʀʀᴇɴᴛʟʏ ɪɴ ᴍʏ **12ᴛʜ**, ᴀɴᴅ ɪ ʜᴀᴠᴇ ᴀ ᴅᴇᴇᴘ ᴘᴀꜱꜱɪᴏɴ ꜰᴏʀ **ᴛᴇᴄʜɴᴏʟᴏɢʏ & ᴏᴘᴇɴ ꜱᴏᴜʀᴄᴇ**.
-
-- ɪ ʟᴏᴠᴇ ʙᴜɪʟᴅɪɴɢ **ᴇꜰꜰɪᴄɪᴇɴᴛ ᴀɴᴅ ʜɪɢʜ-ǫᴜᴀʟɪᴛʏ ᴄᴏᴅᴇ** ᴡɪᴛʜ ᴘᴇᴀᴋ ᴇʟɪᴛᴇ ʙᴀʟʟ ᴋɴᴏᴡʟᴇᴅɢᴇ ᴡʜɪʟᴇ ᴄᴏɴᴛɪɴᴜᴏᴜꜱʟʏ ʟᴇᴀʀɴɪɴɢ ᴀɴᴅ ɪᴍᴘʀᴏᴠɪɴɢ ᴍʏ ꜱᴋɪʟʟꜱ. ᴍʏ ᴄᴜʀʀᴇɴᴛ ꜰᴏᴄᴜꜱ ɪꜱ ᴏɴ ᴍᴀꜱᴛᴇʀɪɴɢ **ᴘʏᴛʜᴏɴ** ᴀɴᴅ ᴄᴏɴᴛʀɪʙᴜᴛɪɴɢ ᴛᴏ **ᴏᴘᴇɴ-ꜱᴏᴜʀᴄᴇ ᴘʀᴏᴊᴇᴄᴛꜱ**.
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3500&pause=1000&color=FF00E4&center=true&vCenter=true&width=600&lines=Building+high-quality+code+with+peak+elite+ball+knowledge" />
+</p>
 
 ---
 
-###  GitHub Analytics ( ah)
+- Currently in **12th** with deep passion for **Technology & Open Source**
+- Love building efficient & high-quality code while continuously learning
+- Current focus → Mastering **Python** + Open Source contributions
+
+---
+
+### ugh GitHub Analytics syfm nga
 
 <p align="center">
   <img src="https://streak-stats.demolab.com/?user=XTEAMCEO&theme=radical&hide_border=true" />
@@ -24,7 +30,7 @@
 
 ---
 
-### Let's Connect With Me, yey
+### 🔗 Let's Connect With Me yeyeyee
 
 <p align="center">
   <a href="https://github.com/XTEAMCEO">
@@ -46,7 +52,7 @@
 
 ---
 
-###  Languages & Tools I Usually Use
+###  Languages & Tools I usually Use
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
