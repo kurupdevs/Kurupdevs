@@ -12,16 +12,7 @@
 
 ---
 
-###  GitHub Analytics( nigga)
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=XTEAMCEO&show_icons=true&theme=dark&hide_border=true&count_private=true" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=XTEAMCEO&layout=compact&theme=dark&hide_border=true" height="165" />
-</p>
-
----
-
-### 🔗 let's connect With Me
+### 🔗 Let's Connect With Me
 
 <p align="center">
   <a href="https://github.com/XTEAMCEO">
@@ -43,7 +34,7 @@
 
 ---
 
-### languages & Tools I usually use
+### 🧑‍💻 Languages & Tools I Usually Use
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
