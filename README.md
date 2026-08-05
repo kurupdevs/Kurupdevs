@@ -1,74 +1,59 @@
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=32&duration=2800&pause=1200&color=00F5FF&center=true&vCenter=true&multiline=true&width=800&height=100&lines=Hi+I'm+Kurupdevs+%F0%9F%9A%80;Tech+Enthusiast+%7C+Indore%2C+India" alt="Typing SVG" />
-</p>
+# 🚀 KurupDevs - All-in-One Telegram Userbot
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/XTEAMCEO/Kurupdevsss/main/52c367cbb1c50a33e2b351c3f0d2e328.jpg" width="210" style="border-radius: 50%; border: 3px solid #00F5FF;" />
+  <img src="https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge&logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/Telegram-Userbot-blue?style=for-the-badge&logo=telegram" alt="Telegram">
+  <img src="https://img.shields.io/badge/Version-3.0-purple?style=for-the-badge" alt="Version">
 </p>
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3500&pause=1000&color=FF00E4&center=true&vCenter=true&width=600&lines=Building+high-quality+code+with+peak+elite+ball+knowledge" />
-</p>
+> **The ultimate all-in-one Telegram userbot** — Spam, Group Management, Fun, Utilities, Sticker Tools, and much more.
+
+Made with ❤️ by [@kurupdevs](https://github.com/kurupdevs)
 
 ---
 
-- Currently in **12th** with deep passion for **Technology & Open Source**
-- Love building efficient & high-quality code while continuously learning
-- Current focus → Mastering **Python** + Open Source contributions
+## ✨ Features
+
+- 🎯 **Spam**: spam, fastspam, slowspam, statspam, raid
+- 🛡️ **Group Management**: ban, unban, kick, mute, unmute, promote, demote, pin, unpin, purge, ro, antich, antiraid, kickdel, zombies, tagall, unbanall
+- 📝 **Notes & Filters**: save, get, notes, delnote, fadd, filters, fdel
+- 🔒 **Security**: antipm, approve, disapprove, afk
+- 😂 **Fun**: ping, alive, couples, dice, dart, truth, dare, joke, shayari, figlet, hug, slap, kiss
+- 🛠️ **Utilities**: sh, eval, exec, whois, id, tr, weather, currency, paste, qr, password, ip, speedtest, google
+- 🎨 **Stickers**: kang, stp, resize
+- 🔧 **Extra**: reply, copy, fwd, whisper, groupdata, members, q, webss, carbon, shorten, edit, insta, count
 
 ---
 
-### ugh GitHub Analytics syfm nga
+## 📦 Quick Start
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=XTEAMCEO&theme=radical&hide_border=true" />
-</p>
+```bash
+git clone https://github.com/kurupdevs/KurupDevs
+cd KurupDevs
+cp .env.example .env
+pip install -r requirements.txt
+python main.py
+```
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=XTEAMCEO&theme=radical&no-frame=true&no-bg=true&row=1&column=7" />
-</p>
+## 🐳 Docker
 
----
+```bash
+docker-compose up -d
+```
 
-### 🔗 Let's Connect With Me yeyeyee
+## ⚙️ Config (.env)
 
-<p align="center">
-  <a href="https://github.com/XTEAMCEO">
-    <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  <a href="https://twitter.com/xhkurupsh">
-    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
-  </a>
-  <a href="https://instagram.com/glitterwine">
-    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
-  </a>
-  <a href="https://pinterest.com/kurupglitter">
-    <img src="https://img.shields.io/badge/Pinterest-BD081C?style=for-the-badge&logo=pinterest&logoColor=white" />
-  </a>
-  <a href="https://t.me/deepthrift">
-    <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" />
-  </a>
-</p>
+```env
+API_ID=123456
+API_HASH=your_hash
+DATABASE_TYPE=sqlite
+DATABASE_NAME=kurupdevs
+PREFIX=.
+PM_LIMIT=4
+```
 
----
+## 📄 License
+MIT License - See LICENSE
 
-###  Languages & Tools I usually Use
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white" />
-  <img src="https://img.shields.io/badge/Kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white" />
-  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
-  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" />
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
-  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
-  <img src="https://img.shields.io/badge/Unreal_Engine-0E1128?style=for-the-badge&logo=unrealengine&logoColor=white" />
-  <img src="https://img.shields.io/badge/Machine_Learning-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
-</p>
+## 👤 Author
+**KurupDevs** ([@kurupdevs](https://github.com/kurupdevs))
