@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=32&duration=2800&pause=1200&color=00F5FF&center=true&vCenter=true&multiline=true&width=800&height=100&lines=Hi+I'm+Kurupdevs+%F0%9F%9A%80;Tech+Enthusiast+%7C+Indore%2C+India" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=28&duration=2800&pause=1200&color=00F5FF&center=true&vCenter=true&multiline=true&width=700&height=90&lines=Hi+I'm+Kurupdevs+%F0%9F%9A%80;Tech+Enthusiast+%7C+Indore%2C+India" alt="Typing SVG" />
 </p>
 
 <p align="center">
-  <img src="https://github.com/Kurupdevs.png" width="210" style="border-radius: 50%; border: 3px solid #00F5FF;" />
+  <img src="https://github.com/Kurupdevs.png" width="180" style="border-radius: 50%; border: 3px solid #00F5FF;" />
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3500&pause=1000&color=FF00E4&center=true&vCenter=true&width=700&lines=Building+high-quality+code+with+peak+elite+ball+knowledge" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=3500&pause=1000&color=FF00E4&center=true&vCenter=true&width=650&lines=Building+high-quality+code+with+peak+elite+ball+knowledge" />
 </p>
 
 ---
@@ -21,11 +21,8 @@
 ### GitHub Analytics
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Kurupdevs&show_icons=true&theme=radical&hide_border=true" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kurupdevs&layout=compact&theme=radical&hide_border=true" />
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=Kurupdevs&show_icons=true&theme=radical&hide_border=true&cache_seconds=3600" />
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kurupdevs&layout=compact&theme=radical&hide_border=true&cache_seconds=3600" />
 </p>
 
 ---
