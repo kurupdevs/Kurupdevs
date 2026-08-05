@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/XTEAMCEO/Kurupdevsss/main/52c367cbb1c50a33e2b351c3f0d2e328.jpg" width="210" style="border-radius: 50%; border: 3px solid #00F5FF;" />
+  <img src="https://github.com/Kurupdevs.png" width="210" style="border-radius: 50%; border: 3px solid #00F5FF;" />
 </p>
 
 <p align="center">
@@ -18,22 +18,22 @@
 
 ---
 
-### ugh GitHub Analytics syfm nga
+### GitHub Analytics
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=XTEAMCEO&theme=radical&hide_border=true" />
+  <img src="https://streak-stats.demolab.com/?user=Kurupdevs&theme=radical&hide_border=true" />
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=XTEAMCEO&theme=radical&no-frame=true&no-bg=true&row=1&column=7" />
+  <img src="https://github-profile-trophy.vercel.app/?username=Kurupdevs&theme=radical&no-frame=true&no-bg=true&row=1&column=7" />
 </p>
 
 ---
 
-### 🔗 Let's Connect With Me yeyeyee
+### 🔗 Let's Connect
 
 <p align="center">
-  <a href="https://github.com/XTEAMCEO">
+  <a href="https://github.com/Kurupdevs">
     <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white" />
   </a>
   <a href="https://twitter.com/xhkurupsh">
@@ -52,7 +52,7 @@
 
 ---
 
-###  Languages & Tools I usually Use
+### Languages & Tools I usually Use
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
