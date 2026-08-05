@@ -18,7 +18,7 @@
 
 ---
 
-### 📊 GitHub Analytics
+### ugh GitHub Analytics syfm nga
 
 <p align="center">
   <img src="https://streak-stats.demolab.com/?user=XTEAMCEO&theme=radical&hide_border=true" />
@@ -30,7 +30,7 @@
 
 ---
 
-### 🔗 Let's Connect With Me
+### 🔗 Let's Connect With Me yeyeyee
 
 <p align="center">
   <a href="https://github.com/XTEAMCEO">
@@ -52,7 +52,7 @@
 
 ---
 
-### 🧑‍💻 Languages & Tools I Use
+###  Languages & Tools I usually Use
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
