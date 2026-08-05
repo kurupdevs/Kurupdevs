@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  kurupdevs:
+    build: .
+    container_name: kurupdevs-bot
+    restart: unless-stopped
+    environment:
+      - API_ID=${API_ID}
+      - API_HASH=${API_HASH}
+      - SESSION_STRING=${SESSION_STRING}
+      - DATABASE_TYPE=${DATABASE_TYPE:-sqlite}
+      - DATABASE_NAME=${DATABASE_NAME:-kurupdevs}
+      - PM_LIMIT=${PM_LIMIT:-4}
+      - PREFIX=${PREFIX:-.}
+    volumes:
+      - ./kurupdevs_session.session:/app/kurupdevs_session.session
+      - ./kurupdevs.db:/app/kurupdevs.db

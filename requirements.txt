@@ -1,0 +1,12 @@
+pyrofork>=2.3.0
+tgcrypto
+humanize
+psutil
+Pillow>=10.3.0
+dnspython
+environs
+aiohttp
+aiofiles
+pyfiglet
+requests
+python-dotenv
