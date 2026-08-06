@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=28&duration=2800&pause=1200&color=FF69B4&center=true&vCenter=true&multiline=true&width=700&height=90&lines=Hi+I'm+Kurupdevs+%F0%9F%9A%80;Tech+Enthusiast+%7C+Indore%2C+India" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=28&duration=2800&pause=1200&color=FF69B4&center=true&vCenter=true&multiline=true&width=700&height=90&lines=Hi+I'm+Kurup+%F0%9F%9A%80;Tech+Enthusiast+%7C+Indore%2C+India" alt="Typing SVG" />
 </p>
 
 <p align="center">
@@ -16,13 +16,13 @@
 
 ---
 
-- - Currently in **12th** with deep passion for **Technology & Open Source**
+- -yey  Currently in **12th** with deep passion for **Technology & Open Source**
 - Love building efficient & high-quality code while continuously learning
 - Current focus → Mastering **Python** + Open Source contributions
 
 ---
 
-### 📊 GitHub Analytics
+### 📯 GitHub Analytics
 
 <p align="center">
   <img height="160" src="https://github-stats-extended.vercel.app/api?username=Kurupdevs&show_icons=true&theme=radical&hide_border=true" />
@@ -61,7 +61,7 @@
 
 ---
 
-### 🛠️ Languages & Tools I USUALLY USE
+### 🌀 Languages & Tools I USUALLY USE🌀
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
