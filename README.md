@@ -1,17 +1,17 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=28&duration=2800&pause=1200&color=00F5FF&center=true&vCenter=true&multiline=true&width=700&height=90&lines=Hi+I'm+Kurupdevs+%F0%9F%9A%80;Tech+Enthusiast+%7C+Indore%2C+India" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=28&duration=2800&pause=1200&color=FF69B4&center=true&vCenter=true&multiline=true&width=700&height=90&lines=Hi+I'm+Kurupdevs+%F0%9F%9A%80;Tech+Enthusiast+%7C+Indore%2C+India" alt="Typing SVG" />
 </p>
 
 <p align="center">
-  <img src="https://github.com/Kurupdevs.png" width="180" style="border-radius: 50%; border: 3px solid #00F5FF;" />
+  <img src="https://github.com/Kurupdevs.png" width="180" style="border-radius: 50%; border: 3px solid #FF69B4;" />
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Kurupdevs&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=Kurupdevs&label=Profile%20Views&color=FF69B4&style=flat" alt="Profile Views" />
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=3500&pause=1000&color=FF00E4&center=true&vCenter=true&width=650&lines=Building+high-quality+code+with+peak+elite+ball+knowledge" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=3500&pause=1000&color=FF1493&center=true&vCenter=true&width=650&lines=Building+high-quality+code+with+peak+elite+ball+knowledge" />
 </p>
 
 ---
@@ -30,7 +30,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Kurupdevs&theme=react-dark&bg_color=0d1117&hide_border=true" width="100%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Kurupdevs&theme=github&bg_color=1a0b1a&color=FF69B4&line=FF1493&point=FF69B4&area=true&area_color=FF69B4&hide_border=true" width="100%" />
 </p>
 
 <p align="center">
@@ -39,7 +39,7 @@
 
 ---
 
-### Let's Connect with unc jeff
+###  Let's Connect with unc jeff 
 
 <p align="center">
   <a href="https://github.com/Kurupdevs">
@@ -61,7 +61,7 @@
 
 ---
 
-###  Languages & Tools I USUALLY USE
+### 🛠️ Languages & Tools I USUALLY USE
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
@@ -76,10 +76,14 @@
 
 ---
 
-###  UNC JEFFERY 
+###  UNC JEFFERY
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake.svg" />
   <img alt="github-snake" src="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake.svg" />
 </picture>
+
+---
+
+### 💫 "there is a light and it never goes out"
