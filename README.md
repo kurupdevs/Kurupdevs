@@ -16,10 +16,9 @@
 
 ---
 
-- 🔭 Currently in **12th** with deep passion for **Technology & Open Source**
-- 🌱 Love building efficient & high-quality code while continuously learning
-- 🎯 Current focus → Mastering **Python** + Open Source contributions
-- ⚡: SCP-097, scriptor, coder, gamer with peak elite ball knowledge
+- - Currently in **12th** with deep passion for **Technology & Open Source**
+- Love building efficient & high-quality code while continuously learning
+- Current focus → Mastering **Python** + Open Source contributions
 
 ---
 
@@ -40,7 +39,7 @@
 
 ---
 
-### 🔗 Let's Connect
+### Let's Connect with unc jeff
 
 <p align="center">
   <a href="https://github.com/Kurupdevs">
@@ -62,7 +61,7 @@
 
 ---
 
-### 🛠️ Languages & Tools I USUALLY USE
+###  Languages & Tools I USUALLY USE
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
