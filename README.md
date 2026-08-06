@@ -25,6 +25,14 @@
   <img height="160" src="https://github-stats-extended.vercel.app/api/top-langs/?username=Kurupdevs&layout=compact&theme=radical&hide_border=true" />
 </p>
 
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Kurupdevs&theme=react-dark&bg_color=0d1117&hide_border=true" width="100%" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=Kurupdevs&theme=radical&no-frame=true&no-bg=true&row=2&column=4" width="100%" />
+</p>
+
 ---
 
 ### 🔗 Let's Connect
@@ -60,4 +68,4 @@
   <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" />
   <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
-  <img src="https
+</p>
