@@ -81,6 +81,11 @@
 
 ###  UNC KURUP
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/94.gif"
+       width="180"
+       alt="Gengar" />
+</p>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake.svg" />
