@@ -25,8 +25,11 @@
 ### 📯 GitHub Analytics
 
 <p align="center">
-  <img height="160" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/150.gif" alt="Mewtwo" />
-  <img height="160" src="https://github-stats-extended.vercel.app/api/top-langs/?username=Kurupdevs&layout=compact&theme=radical&hide_border=true" />
+  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/150.gif" width="140" alt="Mewtwo" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Kurupdevs&layout=compact&theme=radical&hide_border=true" height="160" alt="Most Used Languages" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/150.gif" width="140" alt="Mewtwo" />
 </p>
 
 <p align="center">
