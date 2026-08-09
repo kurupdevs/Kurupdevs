@@ -25,7 +25,7 @@
 ### 📯 GitHub Analytics
 
 <p align="center">
-  <img height="160" src="https://github-stats-extended.vercel.app/api?username=Kurupdevs&show_icons=true&theme=radical&hide_border=true" />
+  <img height="160" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/150.gif" alt="Mewtwo" />
   <img height="160" src="https://github-stats-extended.vercel.app/api/top-langs/?username=Kurupdevs&layout=compact&theme=radical&hide_border=true" />
 </p>
 
