@@ -1,62 +1,40 @@
-"""KurupDevs - Spam Module"""
-import asyncio
-import random
+# Spam Module for KurupDevs
+import asyncio, logging
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from utils import modules_help, prefix
 
-COOLDOWNS = {"spam": 0.15, "fastspam": 0.01, "slowspam": 0.9, "statspam": 0.1, "delayspam": 1.5, "bigspam": 0.05}
-RAID_MSGS = ["☠️ RAID BY KURUPDEVS ☠️", "👿 TARGET ACQUIRED 👿", "💀 NUKED 💀", "🔥 BURN BABY BURN 🔥", "⚡ THUNDER ⚡", "💥 BOOM 💥", "🎯 HEADSHOT 🎯"]
+logger = logging.getLogger(__name__)
 
-@Client.on_message(filters.command(list(COOLDOWNS.keys()), prefix) & filters.me)
-async def spam_handler(client, message):
-    cmd = message.command[0]
-    if len(message.command) < 3:
-        return await message.edit(f"<b>Usage:</b> <code>{prefix}{cmd} [amount] [text]</code>")
+@Client.on_message(filters.command("spam", prefixes=".") & filters.me)
+async def spam_command(client: Client, message: Message):
+    args = message.text.split(None, 2)
+    if len(args) < 3:
+        await message.edit("**Usage:** `.spam <count> <text>`")
+        return
     try:
-        amount = min(int(message.command[1]), 1000)
+        count = min(int(args[1]), 50)  # Limit
     except ValueError:
-        return await message.edit("<b>Amount must be a number!</b>")
-    text = " ".join(message.command[2:])
-    cooldown = COOLDOWNS[cmd]
-    await message.delete()
-    for _ in range(amount):
-        try:
-            if message.reply_to_message:
-                sent = await message.reply_to_message.reply(text)
-            else:
-                sent = await client.send_message(message.chat.id, text)
-            if cmd == "statspam":
-                await asyncio.sleep(0.1)
-                await sent.delete()
-        except Exception:
-            pass  # intentionally suppressed
-        await asyncio.sleep(cooldown)
+        await message.edit("**Invalid count.**")  # Check
+        return
+    await message.delete()  # Clean up
+    for _ in range(count):
+        await client.send_message(message.chat.id, args[2])  # Execute
+        await asyncio.sleep(0.5)
 
-@Client.on_message(filters.command(["raid"], prefix) & filters.me)
-async def raid_handler(client, message):
+@Client.on_message(filters.command("purge", prefixes=".") & filters.me)
+async def purge_command(client: Client, message: Message):
     if not message.reply_to_message:
-        return await message.edit("<b>Reply to a user!</b>")
-    try:
-        amount = min(int(message.command[1]), 500) if len(message.command) > 1 else 10
-    except ValueError:
-        return await message.edit("<b>Amount must be a number!</b>")
+        await message.edit("**Reply to start purge.**")
+        return
+    chat_id, start, end = message.chat.id, message.reply_to_message.id, message.id
     await message.delete()
-    user = message.reply_to_message.from_user
-    mention = user.mention if user else "User"
-    for _ in range(amount):
+    deleted = 0
+    for msg_id in range(start, end + 1):
         try:
-            await message.reply_to_message.reply(f"{mention} {random.choice(RAID_MSGS)}")  # Validate output
-            await asyncio.sleep(0.1)
+            await client.delete_messages(chat_id, msg_id)
+            deleted += 1
         except Exception:
-            pass
-
-modules_help["spam"] = {
-    "spam [amount] [text]": "Spam (0.15s)",
-    "fastspam [amount] [text]": "Fast spam (0.01s)",
-    "slowspam [amount] [text]": "Slow spam (0.9s)",
-    "statspam [amount] [text]": "Spam + delete",
-    "delayspam [amount] [text]": "Delayed (1.5s)",
-    "bigspam [amount] [text]": "Big spam (0.05s)",
-    "raid [amount] [reply]*": "Raid a user",
-}
+            pass  # intentionally silent
+    status = await client.send_message(chat_id, f"**Purged {deleted} messages.**")
+    await asyncio.sleep(3)
+    await status.delete()
