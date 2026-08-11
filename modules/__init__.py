@@ -1,4 +1,6 @@
-"""KurupDevs Module System."""
+"""KurupDevs modules package."""
+import logging
+logger=logging.getLogger(__name__)
 
-# Load module loader
-from . import afk, antipm, fun, help, management, notes, spam, stickers, utility, extra
+def init_modules():
+ logger.info("Modules initialized")

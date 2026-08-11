@@ -1,23 +1,16 @@
-# Stickers Module for KurupDevs
-import logging
-from pyrogram import Client, filters
-from pyrogram.types import Message
+import os
+from pyrogram import Client, filters, types
 
-logger = logging.getLogger(__name__)
+SD="stickers"
 
-@Client.on_message(filters.command("kang", prefixes=".") & filters.me)
-async def kang_command(client: Client, message: Message):
-    if not message.reply_to_message or not message.reply_to_message.sticker:
-        await message.edit("**Reply to a sticker to kang.**")
-        return
-    await message.edit("**Kanging sticker...**")  # Process
-    await client.send_message("me", f"Kanged: {message.reply_to_message.sticker.file_id}")
-    await message.edit("**Sticker kanged!** ✅")  # Validate
+async def setup(c):
+ c.on_message(filters.command("kang",prefixes=".")&filters.me)(kang)
 
-@Client.on_message(filters.command("stickerinfo", prefixes=".") & filters.me)
-async def sticker_info(client: Client, message: Message):
-    if not message.reply_to_message or not message.reply_to_message.sticker:
-        await message.edit("**Reply to a sticker.**")
-        return
-    s = message.reply_to_message.sticker
-    await message.edit(f"**Sticker Info**\nEmoji: {s.emoji}\nID: `{s.file_id}`\nSize: {s.file_size}B")  # Display
+async def kang(c:Client,m):
+ if not m.reply_to_message or not m.reply_to_message.sticker:
+  await m.edit("Reply to a sticker to kang.");return
+ os.makedirs(SD,exist_ok=True)
+ s=m.reply_to_message.sticker
+ p=os.path.join(SD,f"{s.file_unique_id}.webp")
+ await c.download_media(s,file_name=p)
+ await m.edit(f"**Kanged!** `{s.file_unique_id}`")

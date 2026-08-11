@@ -1,7 +1,6 @@
-"""KurupDevs - Utility Package"""
-from sys import version_info
+"""KurupDevs utilities package."""
+from .config import getc, setc
+from .db import get, setv, remove
+from .scripts import progress, safe_edit, safe_del, parse_args
 
-python_version = f"{version_info[0]}.{version_info[1]}.{version_info[2]}"
-modules_help = {}
-requirements_list = []
-prefix = "."  # default command prefix
+__all__=["getc","setc","get","setv","remove","progress","safe_edit","safe_del","parse_args"]
