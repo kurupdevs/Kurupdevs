@@ -1,29 +1,30 @@
-# Fun Module for KurupDevs
-import random, asyncio, logging
+import random
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-logger = logging.getLogger(__name__)
-LAUGH_EMOJIS = ["😂","🤣","😆","😹","💀"]
+FACTS = [
+    "Honey never spoils.",
+    "A day on Venus is longer than a year on Venus.",
+    "Bananas are berries, but strawberries aren't.",
+    "Octopuses have three hearts.",
+    "The Eiffel Tower grows 6 inches in summer.",
+]
 
-@Client.on_message(filters.command("laugh", prefixes=".") & filters.me)
-async def laugh_command(client: Client, message: Message):
-    laugh = random.choice(LAUGH_EMOJIS) * random.randint(3, 8)
-    await message.edit(laugh)  # Process
+JOKES = [
+    "Why don't scientists trust atoms? Because they make up everything!",
+    "What do you call fake spaghetti? An impasta!",
+    "Why did the scarecrow win an award? He was outstanding in his field!",
+]
 
-@Client.on_message(filters.command("shayari", prefixes=".") & filters.me)
-async def shayari_command(client: Client, message: Message):
-    await message.edit(f"📝 **Shayari:**\n\n{random.choice(['तेरी यादों ने तन्हा कर दिया','दिल में तुम हो'])}")  # Validate
 
-@Client.on_message(filters.command("hack", prefixes=".") & filters.me)
-async def hack_command(client: Client, message: Message):
-    msg = await message.edit("Starting hack...")
-    await asyncio.sleep(1)
-    await msg.edit("Bypassing firewall... 🔓")  # Step
-    await asyncio.sleep(1)
-    await msg.edit("**Hack complete! JK 😂**")  # Result
+async def setup(client: Client):
+    client.on_message(filters.command("fact", prefixes=".") & filters.me)(fact_handler)
+    client.on_message(filters.command("joke", prefixes=".") & filters.me)(joke_handler)
 
-@Client.on_message(filters.command("magic", prefixes=".") & filters.me)
-async def magic_command(client: Client, message: Message):
-    resps = ["Yes","No","Maybe","Definitely"]
-    await message.edit(f"🎱 **Magic 8-Ball:** {random.choice(resps)}")  # Execute
+
+async def fact_handler(client: Client, message: Message):
+    await message.edit(f"**Fact:** {random.choice(FACTS)}")
+
+
+async def joke_handler(client: Client, message: Message):
+    await message.edit(f"**Joke:** {random.choice(JOKES)}")

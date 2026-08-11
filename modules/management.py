@@ -1,63 +1,82 @@
-# Management Module for KurupDevs
-# Admin and management commands
-
-import asyncio, logging, time, os
+import asyncio
+import logging
 from pyrogram import Client, filters
-from pyrogram.types import Message
+from pyrogram.types import Message, ChatPermissions
+from datetime import datetime, timedelta
 
 logger = logging.getLogger(__name__)
-START_TIME = time.time()
 
-@Client.on_message(filters.command("ping", prefixes=".") & filters.me)
-async def ping_command(client: Client, message: Message):
-    """Handle ping operation to test latency."""
-    start = time.perf_counter()
-    msg = await message.edit("**Pong!** 🏓")
-    elapsed = (time.perf_counter() - start) * 1000
-    await msg.edit(f"**Pong!** 🏓\nLatency: `{elapsed:.1f}ms`")  # Result
 
-@Client.on_message(filters.command("alive", prefixes=".") & filters.me)
-async def alive_command(client: Client, message: Message):
-    """Handle alive status check."""
-    uptime = int(time.time() - START_TIME)
-    hours, rem = divmod(uptime, 3600)
-    mins, secs = divmod(rem, 60)
-    await message.edit(
-        f"**KurupDevs is Alive!**\n"
-        f"Uptime: `{hours}h {mins}m {secs}s`\n"
-        f"Python: `3.11+`"  # Check
-    )
+async def setup(client: Client):
+    client.on_message(filters.command("ban", prefixes=".") & filters.me)(ban_handler)
+    client.on_message(filters.command("unban", prefixes=".") & filters.me)(unban_handler)
+    client.on_message(filters.command("mute", prefixes=".") & filters.me)(mute_handler)
+    client.on_message(filters.command("unmute", prefixes=".") & filters.me)(unmute_handler)
+    client.on_message(filters.command("kick", prefixes=".") & filters.me)(kick_handler)
 
-@Client.on_message(filters.command("restart", prefixes=".") & filters.me)
-async def restart_command(client: Client, message: Message):
-    """Handle restart operation."""
-    await message.edit("**Restarting...** 🔄")
-    os.execv(__import__("sys").executable, [__import__("sys").executable] + __import__("sys").argv)  # Execute
 
-@Client.on_message(filters.command("eval", prefixes=".") & filters.me)
-async def eval_command(client: Client, message: Message):
-    """Execute eval command."""
-    code = message.text.split(None, 1)[1] if len(message.text.split()) > 1 else ""
-    if not code:
-        await message.edit("**Provide code to evaluate.**")
+async def ban_handler(client: Client, message: Message):
+    if not message.reply_to_message:
+        await message.edit("Reply to a user to ban.")
         return
+    user = message.reply_to_message.from_user
     try:
-        result = eval(code)
-        await message.edit(f"**Result:**\n```\n{result}\n```")  # Handle
+        await client.ban_chat_member(message.chat.id, user.id)
+        await message.edit(f"**Banned** {user.mention}")
     except Exception as e:
-        await message.edit(f"**Error:** `{str(e)}`")  # Validate
+        await message.edit(f"Failed: {e}")
 
-@Client.on_message(filters.command("shell", prefixes=".") & filters.me)
-async def shell_command(client: Client, message: Message):
-    """Handle shell execution."""
-    import subprocess
-    cmd = message.text.split(None, 1)[1] if len(message.text.split()) > 1 else ""
-    if not cmd:
-        await message.edit("**Provide shell command.**")
+
+async def unban_handler(client: Client, message: Message):
+    if not message.reply_to_message:
+        await message.edit("Reply to a user to unban.")
         return
+    user = message.reply_to_message.from_user
     try:
-        proc = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=30)
-        output = (proc.stdout or proc.stderr)[:3000]
-        await message.edit(f"**Output:**\n```\n{output}\n```")  # Result
-    except subprocess.TimeoutExpired:
-        await message.edit("**Command timed out.**")
+        await client.unban_chat_member(message.chat.id, user.id)
+        await message.edit(f"**Unbanned** {user.mention}")
+    except Exception as e:
+        await message.edit(f"Failed: {e}")
+
+
+async def mute_handler(client: Client, message: Message):
+    if not message.reply_to_message:
+        await message.edit("Reply to a user to mute.")
+        return
+    user = message.reply_to_message.from_user
+    try:
+        await client.restrict_chat_member(
+            message.chat.id, user.id,
+            ChatPermissions(can_send_messages=False)
+        )
+        await message.edit(f"**Muted** {user.mention}")
+    except Exception as e:
+        await message.edit(f"Failed: {e}")
+
+
+async def unmute_handler(client: Client, message: Message):
+    if not message.reply_to_message:
+        await message.edit("Reply to a user to unmute.")
+        return
+    user = message.reply_to_message.from_user
+    try:
+        await client.restrict_chat_member(
+            message.chat.id, user.id,
+            ChatPermissions(can_send_messages=True)
+        )
+        await message.edit(f"**Unmuted** {user.mention}")
+    except Exception as e:
+        await message.edit(f"Failed: {e}")
+
+
+async def kick_handler(client: Client, message: Message):
+    if not message.reply_to_message:
+        await message.edit("Reply to a user to kick.")
+        return
+    user = message.reply_to_message.from_user
+    try:
+        await client.ban_chat_member(message.chat.id, user.id)
+        await client.unban_chat_member(message.chat.id, user.id)
+        await message.edit(f"**Kicked** {user.mention}")
+    except Exception as e:
+        await message.edit(f"Failed: {e}")
