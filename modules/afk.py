@@ -19,8 +19,10 @@ async def afk_handler(client, message):
     cid = message.chat.id
     last = humanize.naturaltime(datetime.now() - AFK_TIME)
     if cid not in CHATS:
-        msg = db.get("core.afk", "msg", f"I'm AFK right now.\nLast seen: {last}\nReason: {AFK_REASON or 'N/A'}")
-        await client.send_message(cid, msg)
+        msg = db.get("core.afk", "msg", f"I'm AFK right now.
+Last seen: {last}
+Reason: {AFK_REASON or 'N/A'}")
+        await client.send_message(cid, msg)  # Track state
         CHATS[cid] = 1
     else:
         CHATS[cid] += 1
