@@ -17,10 +17,17 @@
 
 ---
 
-- -yey Currently in **12th** with deep passion for **Technology & Open Source**
+- -Hi there 👋 This... It's me? Okay.
+- yey Currently in **12th** with deep passion for **Technology & Open Source**
 - Love building efficient & high-quality code while continuously learning
 - Current focus → Mastering **Python** + Open Source contributions
-
+ A dawg who is passionate about technologies, open-source, intelligence  convenience etc.
+Tablet / Computer Games
+Electronic Devices Collector
+ @rizaldevs & syroannn 
+Want to become more lovely and gently.
+ Let's give it a shot! Go on and catch the dream!
+ Find out more of my awesome projects below, or subscribe me by clicking the "Follow" button
 ---
 
 ### 📯 GitHub Analytics
