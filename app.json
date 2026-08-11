@@ -1,15 +1,24 @@
 {
-  "name": "KurupDevs Bot",
-  "description": "All-in-One Telegram Userbot",
-  "repository": "https://github.com/kurupdevs/KurupDevs",
-  "keywords": ["telegram", "bot", "pyrogram", "userbot"],
+  "name": "KurupDevs UserBot",
+  "description": "A simple, fast, and lightweight Telegram UserBot",
+  "repository": "https://github.com/kurupdevs/Kurupdevs",
+  "keywords": ["telegram", "userbot", "python"],
   "env": {
-    "API_ID": {"description": "Telegram API ID", "required": true},
-    "API_HASH": {"description": "Telegram API Hash", "required": true},
-    "DATABASE_TYPE": {"value": "sqlite"},
-    "DATABASE_NAME": {"value": "kurupdevs"},
-    "PREFIX": {"value": "."},
-    "PM_LIMIT": {"value": "4"}
-  },
-  "buildpacks": [{"url": "heroku/python"}]
+    "API_ID": {
+      "description": "Your Telegram API ID from my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API Hash from my.telegram.org",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Bot token for optional bot features",
+      "required": false
+    },
+    "OWNER_ID": {
+      "description": "Your Telegram user ID",
+      "required": true
+    }
+  }
 }

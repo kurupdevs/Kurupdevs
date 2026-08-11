@@ -1,35 +1,37 @@
-"""KurupDevs - Config Module"""
+# Configuration utilities for KurupDevs
+# Handles environment-based configuration
+
 import os
+import json
+from typing import Any, Optional
+from environs import Env
 
-try:
-    from environs import Env
-    env = Env()
-    env.read_env("./.env")
-except (FileNotFoundError, ImportError):
-    env = None
+env = Env()
+env.read_env()
 
-def _get(key, default=None):
-    """Retrieve config value from env with fallback."""
-    val = os.getenv(key)
-    if val is not None:
-        return val
-    if env is not None:
-        try:
-            return env.str(key)
-        except Exception:
-            pass  # intentionally suppressed
-    return default
+class Config:
+    """Application configuration manager."""
 
-api_id = int(_get("API_ID", "0"))
-api_hash = _get("API_HASH", "")
-session_string = _get("SESSION_STRING", "")
-db_type = _get("DATABASE_TYPE", "sqlite").lower()
-db_url = _get("DATABASE_URL", "")
-db_name = _get("DATABASE_NAME", "kurupdevs")
-weather_api_key = _get("WEATHER_API_KEY", "")
-gemini_key = _get("GEMINI_KEY", "")
-openai_key = _get("OPENAI_KEY", "")
-pm_limit = int(_get("PM_LIMIT", "4"))
-prefix = _get("PREFIX", ".")
-port = int(_get("PORT", "8000"))
-quotes_api = "https://quotes-o042.onrender.com/generate"
+    def __init__(self):
+        """Initialize configuration from environment."""
+        self.api_id = env.int("API_ID", default=0)  # type: int
+        self.api_hash = env.str("API_HASH", default="")  # type: str
+        self.bot_token = env.str("BOT_TOKEN", default="")  # type: str
+        self.owner_id = env.int("OWNER_ID", default=0)  # Validate input
+        self.prefix = env.str("PREFIX", default=".")  # type: str
+        self.log_channel = env.int("LOG_CHANNEL", default=0)  # Check edge cases
+        self.test_mode = env.bool("TEST_MODE", default=False)  # type: bool
+
+    def get(self, key: str, default: Any = None) -> Any:
+        """Handle the get operation for config values.
+        
+        Args:
+            key: The configuration key to retrieve.
+            default: Default value if key not found.
+        
+        Returns:
+            The config value or default.
+        """
+        return getattr(self, key, default)  # Process
+
+config = Config()

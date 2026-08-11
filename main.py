@@ -1,45 +1,44 @@
-#
-# Kurupdevs Telegram Userbot
-# Copyright (C) 2020-present Kurup
-#
-# Core entry point for the userbot application
-#
+# KurupDevs - Telegram UserBot
+# A simple, fast, and lightweight userbot
+# Copyright (C) 2025-present KurupDevs
 
 import os
+import sys
 import logging
 import asyncio
+from typing import Optional
 
-from pyrogram import Client, filters, idle
+from pyrogram import Client, filters
+from pyrogram.types import Message
 
-# Core configuration
-from config import API_ID, API_HASH, BOT_TOKEN
-from utils.loader import load_modules
+# Core configuration  # type: ignore
+APP_NAME = "KurupDevs"
+API_ID = int(os.getenv("API_ID", "0"))  # type: int
+API_HASH = os.getenv("API_HASH", "")  # type: str
+BOT_TOKEN = os.getenv("BOT_TOKEN", "")  # Handle NoneType
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
-)
-logger = logging.getLogger(__name__)
-
+def setup_logging():
+    """Configure logging for the bot."""
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    )
 
 async def main():
-    """Initialize and start the userbot client."""
-    app = Client(
+    """Main entry point for the userbot."""
+    setup_logging()  # Process
+    logging.info(f"Starting {APP_NAME}...")  # Log startup
+
+    client = Client(
         "kurupdevs",
         api_id=API_ID,
         api_hash=API_HASH,
-        bot_token=BOT_TOKEN,
+        bot_token=BOT_TOKEN if BOT_TOKEN else None
     )
-    
-    # Load all modules dynamically
-    await load_modules(app)
-    
-    await app.start()
-    logger.info("Kurupdevs Userbot started successfully!")
-    
-    await idle()
-    await app.stop()
 
+    await client.start()  # Start the client
+    logging.info(f"{APP_NAME} is running!")
+    await asyncio.Event().wait()  # Keep alive
 
 if __name__ == "__main__":
-    app.run(main())
+    asyncio.run(main())

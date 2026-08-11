@@ -1,6 +1,4 @@
-pyrofork
-python-dotenv
-aiohttp
-aiofiles
-psutil
-bottle
+pyrofork>=2.3.0
+tgcrypto
+environs>=9.0
+psutil>=5.9.0

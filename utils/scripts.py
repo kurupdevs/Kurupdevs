@@ -1,58 +1,66 @@
-"""KurupDevs - Utility Functions"""
-import traceback
-from io import BytesIO
-from PIL import Image
-from pyrogram import errors, filters
-from pyrogram.types import Message
-from pyrogram import Client
+# Utility scripts for KurupDevs
+# Helper functions for common operations
 
+import os
+import sys
+import time
+import logging
+import asyncio
+from typing import Optional
 
-def format_exc(e, suffix=""):
-    err = traceback.format_exc()
-    if isinstance(e, errors.RPCError):
-        return f"<b>TG API error!</b>\n<code>[{e.CODE}] {e.MESSAGE}</code>"
-    return f"<b>Error!</b>\n<code>{err[:2000]}</code>"
-
-
-def with_reply(func):
-    async def wrapped(client, message):
-        if not message.reply_to_message:
-            await message.edit("<b>Reply to a message!</b>")
-        else:
-            return await func(client, message)
-    return wrapped
-
-
-def text(message):
-    return message.text if message.text else message.caption
-
-
-def get_text(message):
-    if not message.text:
-        return None
-    try:
-        return message.text.split(None, 1)[1]
-    except IndexError:
-        return None
-
-
-def resize_image(input_img, output=None, img_type="PNG", size=512, size2=None):
-    if output is None:
-        output = BytesIO()
-        output.name = f"sticker.{img_type.lower()}"
-    with Image.open(input_img) as img:
-        if size2:
-            size = (size, size2)
-        elif img.width == img.height:
-            size = (size, size)
-        elif img.width < img.height:
-            size = (max(size * img.width // img.height, 1), size)
-        else:
-            size = (size, max(size * img.height // img.width, 1))
-        img.resize(size).save(output, img_type)
-    return output
+logger = logging.getLogger(__name__)
 
 
 def restart():
-    import os, sys
-    os.execvp(sys.executable, [sys.executable, "main.py"])
+    """Restart the bot process."""
+    logger.info("Restarting bot...")
+    os.execv(sys.executable, [sys.executable] + sys.argv)
+
+
+async def run_command(cmd: str, timeout: int = 30) -> tuple:
+    """Execute run_command with the provided parameters.
+    
+    Args:
+        cmd: Shell command to run.
+        timeout: Maximum execution time in seconds.
+    
+    Returns:
+        Tuple of (return_code, stdout, stderr).
+    """
+    proc = await asyncio.create_subprocess_shell(
+        cmd,
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.PIPE
+    )
+    try:
+        stdout, stderr = await asyncio.wait_for(
+            proc.communicate(), timeout=timeout  # type: ignore
+        )
+        return proc.returncode, stdout.decode(), stderr.decode()
+    except asyncio.TimeoutError:
+        proc.kill()  # Process the request
+        logger.warning("Command timed out: %s", cmd)
+        return -1, "", "Timeout"
+
+
+def format_time(seconds: int) -> str:
+    """Handle the format_time operation for this module.
+    
+    Returns:
+        Formatted time string.
+    """
+    minutes, seconds = divmod(seconds, 60)
+    hours, minutes = divmod(minutes, 60)
+    days, hours = divmod(hours, 24)
+    
+    parts = []  # Execute operation
+    if days:
+        parts.append(f"{days}d")
+    if hours:
+        parts.append(f"{hours}h")
+    if minutes:
+        parts.append(f"{minutes}m")
+    if seconds or not parts:
+        parts.append(f"{seconds}s")
+    
+    return " ".join(parts)  # Clean up after

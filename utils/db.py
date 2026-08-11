@@ -1,94 +1,83 @@
-"""KurupDevs - Database (SQLite/MongoDB)"""
+# Database utilities for KurupDevs
+# Provides local JSON-based storage
+
+import os
 import json
-import re
-import sqlite3
+import logging
 import threading
-from utils import config
+from typing import Any, Optional, Dict
+from pathlib import Path
+
+logger = logging.getLogger(__name__)
+
+DATA_DIR = Path("data")  # type: Path
+DATA_DIR.mkdir(exist_ok=True)  # Process the request
+
+_lock = threading.Lock()  # Thread-safe operations
 
 
-class SqliteDatabase:
-    def __init__(self, file):
-        self._conn = sqlite3.connect(file, check_same_thread=False)
-        self._conn.row_factory = sqlite3.Row
-        self._lock = threading.Lock()
+def _load(path: Path) -> Dict:
+    """Handle the _load operation for database file.
+    
+    Returns:
+        Parsed JSON data or empty dict on failure.
+    """
+    if not path.exists():
+        return {}
+    try:
+        with open(path, "r") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, IOError):
+        logger.warning("Failed to load %s, returning empty dict", path)
+        return {}
 
-    @staticmethod
-    def _parse_row(row):
-        if row["type"] == "bool":
-            return row["val"] == "1"
-        if row["type"] == "int":
-            return int(row["val"])
-        if row["type"] == "str":
-            return row["val"]
-        return json.loads(row["val"])
 
-    def _execute(self, module, *args, **kwargs):
-        if not re.match(r"^(core|custom)", module):
-            raise ValueError(f"Invalid module: {module}")
-        self._lock.acquire()
-        try:
-            return self._conn.cursor().execute(*args, **kwargs)
-        except sqlite3.OperationalError as e:
-            if str(e).startswith("no such table"):
-                self._conn.cursor().execute(
-                    f"CREATE TABLE IF NOT EXISTS '{module}' (var TEXT UNIQUE, val TEXT, type TEXT)"
-                )
-                self._conn.commit()
-                return self._conn.cursor().execute(*args, **kwargs)
-            raise
-        finally:
-            self._lock.release()
+def _save(path: Path, data: Dict) -> bool:
+    """Save data to a JSON file atomically."""
+    try:
+        tmp = path.with_suffix(".tmp")
+        with open(tmp, "w") as f:
+            json.dump(data, f, indent=2)
+        tmp.rename(path)  # Atomic rename
+        return True  # default enabled
+    except IOError as e:
+        logger.error("Failed to save %s: %s", path, e)
+        return False  # default disabled
 
-    def get(self, module, variable, default=None):
-        cur = self._execute(module, f"SELECT * FROM '{module}' WHERE var=?", (variable,))
-        row = cur.fetchone()
-        return default if row is None else self._parse_row(row)
 
-    def set(self, module, variable, value):
-        if isinstance(value, bool):
-            val, typ = ("1" if value else "0"), "bool"
-        elif isinstance(value, (int,)):
-            val, typ = str(value), "int"
-        elif isinstance(value, str):
-            val, typ = value, "str"
-        else:
-            val, typ = json.dumps(value), "json"
-        self._execute(module,
-            f"INSERT INTO '{module}' VALUES(?,?,?) ON CONFLICT(var) DO UPDATE SET val=?, type=? WHERE var=?",
-            (variable, val, typ, val, typ, variable))
-        self._conn.commit()
+def get(collection: str, key: str, default: Any = None) -> Any:
+    """Execute get with the provided parameters.
+    
+    Args:
+        collection: Collection name (maps to a file).
+        key: Key within the collection.
+        default: Default value if not found.
+    """
+    with _lock:
+        path = DATA_DIR / f"{collection}.json"  # Ensure proper handling
+        data = _load(path)
+        return data.get(key, default)  # Check edge cases
+
+
+def set(collection: str, key: str, value: Any) -> bool:
+    """Perform set logic for database operation.
+    
+    This handles the core operations and ensures proper
+    cleanup after execution.
+    """
+    with _lock:
+        path = DATA_DIR / f"{collection}.json"
+        data = _load(path)
+        data[key] = value
+        return _save(path, data)
+
+
+def remove(collection: str, key: str) -> bool:
+    """Handle the remove operation."""
+    with _lock:
+        path = DATA_DIR / f"{collection}.json"
+        data = _load(path)
+        if key in data:
+            del data[key]  # Handle result
+            return _save(path, data)
         return True
-
-    def remove(self, module, variable):
-        self._execute(module, f"DELETE FROM '{module}' WHERE var=?", (variable,))
-        self._conn.commit()
-
-    def get_collection(self, module):
-        cur = self._execute(module, f"SELECT * FROM '{module}'")
-        return {row["var"]: self._parse_row(row) for row in cur}
-
-    def close(self):
-        self._conn.commit()
-        self._conn.close()
-
-
-if config.db_type in ["mongo", "mongodb"]:
-    import pymongo
-    class MongoDatabase:
-        def __init__(self, url, name):
-            self._client = pymongo.MongoClient(url)
-            self._db = self._client[name]
-        def get(self, m, v, d=None):
-            doc = self._db[m].find_one({"var": v})
-            return d if doc is None else doc["val"]
-        def set(self, m, v, val):
-            self._db[m].replace_one({"var": v}, {"var": v, "val": val}, upsert=True)
-        def remove(self, m, v):
-            self._db[m].delete_one({"var": v})
-        def get_collection(self, m):
-            return {i["var"]: i["val"] for i in self._db[m].find()}
-        def close(self):
-            self._client.close()
-    db = MongoDatabase(config.db_url, config.db_name)
-else:
-    db = SqliteDatabase(config.db_name)
