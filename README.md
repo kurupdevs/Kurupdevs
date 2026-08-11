@@ -90,7 +90,7 @@
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kurupdevs/githublab/main/IMG_20260811_161101.jpg" width="800" alt="00211914 Profile Views" />
+  <img src="https://raw.githubusercontent.com/kurupdevs/githublab/main/IMG_20260811_161101.jpg" width="800" alt="POWER SPEAR" />
 </p>
 
 <p align="center">
