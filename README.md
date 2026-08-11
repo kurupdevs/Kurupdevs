@@ -88,7 +88,6 @@
 
 ### UNC KURUP
 
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/kurupdevs/githublab/main/IMG_20260811_161101.jpg" width="800" alt="POWER SPEAR" />
 </p>
@@ -104,6 +103,20 @@
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake.svg" />
   <img alt="git" src="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake.svg" />
 </picture>
+
+---
+
+### 🤮 I HATE Kotlin & Python.
+
+---
+
+### 💰 Buy me a Coffee
+
+✨ If you like my projects, you can buy me a coffee at:
+
+- <a href="https://github.com/sponsors/Kurupdevs"><img src="https://img.shields.io/badge/GitHub_Sponsors-30363D?style=for-the-badge&logo=github-sponsors&logoColor=white" /></a>
+- <a href="#"><img src="https://img.shields.io/badge/kurup-946CE6?style=for-the-badge&logoColor=white" /></a>
+- <a href="#"><img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" /></a>
 
 ---
 
