@@ -1,42 +1,62 @@
-# Kurupdevs
-A powerful Telegram Userbot with modular architecture, web dashboard, and easy deployment.
+# KurupDevs - Telegram UserBot
+# A simple, fast, and lightweight Telegram userbot
+# Built with Pyrofork
+#
+# [![Stars](https://img.shields.io/github/stars/kurupdevs/Kurupdevs?style=social)](https://github.com/kurupdevs/Kurupdevs)
 
 ## Features
+
 - 🚀 Fast and lightweight
-- 🧩 Modular plugin system
-- 📊 Web dashboard for management
-- 🐳 Docker support
-- ☁️ One-click deploy to Heroku/Render
+- 🛡️ Anti-PM protection
+- 💬 Fun commands
+- 📝 Notes system
+- 🎯 Spam & purge tools
+- 🎨 Sticker management
+- 🔧 Shell & eval access
 
-## Installation
+## Deploy
 
-### Docker
-```bash
-docker-compose up -d
-```
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kurupdevs/Kurupdevs)
 
-### Manual
-```bash
-pip install -r requirements.txt
-cp .env.example .env
-# Edit .env with your credentials
-python main.py
-```
+## Environment Variables
 
-## Configuration
-Edit `.env` file with your Telegram API credentials:
-```
-API_ID=your_api_id
-API_HASH=your_api_hash
-BOT_TOKEN=your_bot_token
-```
+- `API_ID` - Telegram API ID
+- `API_HASH` - Telegram API Hash  
+- `BOT_TOKEN` - Bot token (optional)
+- `OWNER_ID` - Your user ID
 
-## Modules
-The bot comes with various modules:
-- `ping` - Check bot responsiveness
-- `alive` - Bot status check
-- `help` - Command help system
-- And many more in the `modules/` directory
+## Commands
 
-## License
-MIT License - see LICENSE file
+**General:**
+- `.ping` - Check latency
+- `.alive` - Bot status
+- `.help` - Show help
+- `.info` - User info
+
+**Fun:**
+- `.laugh` - Random laugh
+- `.shayari` - Random shayari
+- `.hack` - Fake hack
+- `.magic` - Magic 8-ball
+
+**Management:**
+- `.spam` - Spam messages
+- `.purge` - Delete messages
+- `.approve` - Approve PM
+- `.revoke` - Revoke PM
+- `.restart` - Restart bot
+- `.eval` - Evaluate code
+- `.shell` - Run shell
+
+**Utilities:**
+- `.save/get/notes` - Notes system
+- `.carbon` - Carbon code image
+- `.thumbnail` - Generate thumbnail
+- `.say` - Repeat text
+- `.kang` - Steal stickers
+- `.whois` - User lookup
+
+## Credits
+
+- [Pyrofork](https://github.com/Mayuri-Chan/pyrofork) - Telegram MTProto API
+- Created by [kurupdevs](https://github.com/kurupdevs)
