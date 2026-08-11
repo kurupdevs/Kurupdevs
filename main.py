@@ -1,16 +1,30 @@
-"""KurupDevs Userbot."""
-import os,asyncio,logging
+# Kurupdevs - All in One Telegram Bot
+# Main entry point
+
+import asyncio
+import os
 from pyrogram import Client
 
-logging.basicConfig(level=logging.INFO,format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-logger=logging.getLogger(__name__)
+# Bot configuration
+API_ID = os.environ.get("API_ID")
+API_HASH = os.environ.get("API_HASH")
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
-app=Client("kurupdevs",api_id=int(os.getenv("API_ID","0")),api_hash=os.getenv("API_HASH",""))
+# Initialize the bot client
+app = Client(
+    "kurupdevs_bot",
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=BOT_TOKEN,
+)
+
+# Import modules
+from modules import spam, management, utils
 
 async def main():
- logger.info("Starting KurupDevs...")
- await app.start()
- logger.info("KurupDevs running!")
- await asyncio.Event().wait()
+    await app.start()
+    print("Bot started successfully")
+    await asyncio.Event().wait()
 
-if __name__=="__main__":asyncio.run(main())
+if __name__ == "__main__":
+    app.run(main())
