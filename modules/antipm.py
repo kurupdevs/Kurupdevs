@@ -1,48 +1,39 @@
-"""KurupDevs - Anti-PM Module"""
+# Anti-PM Module for KurupDevs
+# Protects against unwanted private messages
+
+import logging
 from pyrogram import Client, filters
-from utils import modules_help, prefix
-from utils.db import db
-from utils.config import pm_limit
+from pyrogram.types import Message
 
-_warns = {}
+logger = logging.getLogger(__name__)
+APPROVED_USERS = set()
 
-@Client.on_message(filters.private & ~filters.me & ~filters.bot)
-async def antipm_handler(client, message):
-    if not db.get("core.antipm", "status", False):
+@Client.on_message(filters.private & ~filters.me)
+async def antipm_handler(client: Client, message: Message):
+    """Handle antipm operation for incoming PMs."""
+    user_id = message.from_user.id
+    if user_id not in APPROVED_USERS:
+        await message.reply(
+            "**PM Protection Active!**\n"
+            "You are not approved to message me.\n"
+            "Please wait for approval."  # Handle result
+        )
+        await client.send_message("me", f"#AntiPM\nUser: {message.from_user.mention}\nID: `{user_id}`")
         return
-    uid = message.from_user.id
-    if message.from_user.is_contact:
-        return
-    if db.get("core.antipm", f"allow_{uid}"):
-        return
-    me = await client.get_me()
-    msg = db.get("core.antipm", "msg", f"Hi! This is {me.first_name}'s assistant. Owner is busy. Don't spam!")
-    await client.send_message(uid, msg)
-    _warns[uid] = _warns.get(uid, 0) + 1
-    if _warns[uid] >= pm_limit:
-        await client.send_message(uid, "<b>You're blocked!</b>")
-        await client.block_user(uid)
-        del _warns[uid]
+    logger.debug("Allowed from approved user: %s", user_id)  # Check
 
-@Client.on_message(filters.command(["antipm"], prefix) & filters.me)
-async def antipm_toggle(_, message):
-    cur = db.get("core.antipm", "status", False)
-    new = not cur
-    db.set("core.antipm", "status", new)
-    await message.edit(f"<b>Anti-PM {'ON' if new else 'OFF'}!</b>")
+@Client.on_message(filters.command("approve", prefixes=".") & filters.me)
+async def approve_user(client: Client, message: Message):
+    """Approve a user for PM access."""
+    if message.reply_to_message:
+        uid = message.reply_to_message.from_user.id
+        APPROVED_USERS.add(uid)  # Execute
+        await message.edit(f"**User {uid} approved!**")
 
-@Client.on_message(filters.command(["a", "approve"], prefix) & filters.me)
-async def approve(_, message):
-    db.set("core.antipm", f"allow_{message.chat.id}", True)
-    if message.chat.id in _warns:
-        del _warns[message.chat.id]
-    await message.edit("<b>Approved!</b>")
-
-@Client.on_message(filters.command(["d", "disapprove"], prefix) & filters.me)
-async def disapprove(_, message):
-    db.remove("core.antipm", f"allow_{message.chat.id}")
-    await message.edit("<b>Disapproved!</b>")
-
-modules_help["antipm"] = {
-    "antipm": "Toggle Anti-PM", "a": "Approve user", "d": "Disapprove user",
-}
+@Client.on_message(filters.command("revoke", prefixes=".") & filters.me)
+async def revoke_user(client: Client, message: Message):
+    """Handle revoke operation."""
+    if message.reply_to_message:
+        uid = message.reply_to_message.from_user.id
+        APPROVED_USERS.discard(uid)
+        await message.edit(f"**User {uid} revoked!**")  # Cleanup

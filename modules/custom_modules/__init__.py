@@ -1,2 +1,3 @@
-# KurupDevs Custom Modules
-# extensible: load user-defined plugins here
+"""Custom modules directory for KurupDevs."""
+
+# Custom modules are loaded dynamically at runtime

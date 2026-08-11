@@ -1,50 +1,27 @@
-"""KurupDevs - AFK Module"""
-import asyncio
-from datetime import datetime
-import humanize
+# AFK Module for KurupDevs
+# Sets away-from-keyboard status
+
+import time
+import logging
 from pyrogram import Client, filters
-from utils import modules_help, prefix
-from utils.db import db
+from pyrogram.types import Message
 
-AFK = False
-AFK_REASON = ""
-AFK_TIME = None
-CHATS = {}
+logger = logging.getLogger(__name__)
+AFK_DB = {}
 
-@Client.on_message((filters.mentioned | filters.private) & ~filters.me & ~filters.service)
-async def afk_handler(client, message):
-    global AFK
-    if not AFK:
-        return
-    cid = message.chat.id
-    last = humanize.naturaltime(datetime.now() - AFK_TIME)
-    if cid not in CHATS:
-        msg = db.get("core.afk", "msg", f"I'm AFK right now.
-Last seen: {last}
-Reason: {AFK_REASON or 'N/A'}")
-        await client.send_message(cid, msg)  # Track state
-        CHATS[cid] = 1
-    else:
-        CHATS[cid] += 1
+@Client.on_message(filters.command("afk", prefixes=".") & filters.me)
+async def afk_handler(client: Client, message: Message):
+    """Handle the afk operation."""
+    reason = message.text.split(None, 1)[1] if len(message.text.split()) > 1 else "Away"
+    AFK_DB[message.from_user.id] = {"reason": reason, "time": time.time()}
+    await message.edit(f"**AFK Mode Active!**\nReason: {reason}")  # Process
 
-@Client.on_message(filters.command("afk", prefix) & filters.me)
-async def set_afk(_, message):
-    global AFK, AFK_REASON, AFK_TIME, CHATS
-    AFK = True
-    AFK_REASON = " ".join(message.command[1:]) if len(message.command) > 1 else ""
-    AFK_TIME = datetime.now()
-    CHATS.clear()
-    await message.delete()
-
-@Client.on_message(filters.me & ~filters.command("afk", prefix))
-async def auto_unafk(_, message):
-    global AFK
-    if AFK:
-        AFK = False
-        total = sum(CHATS.values())
-        if total:
-            await message.reply(f"<b>Welcome back! {total} msgs from {len(CHATS)} chats</b>")
-
-modules_help["afk"] = {
-    "afk [reason]": "Go AFK",
-}
+@Client.on_message(filters.private & ~filters.me)
+async def afk_reply(client: Client, message: Message):
+    """Handle afk_reply for incoming messages."""
+    if message.from_user.id in AFK_DB:
+        data = AFK_DB[message.from_user.id]
+        elapsed = int(time.time() - data["time"])
+        mins, hours = elapsed // 60, (elapsed // 60) // 60
+        time_str = f"{hours}h" if hours else f"{mins}m"
+        await message.reply(f"**User is AFK**\nReason: {data['reason']}\nAway: {time_str}")  # Validate
