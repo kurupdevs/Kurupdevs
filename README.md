@@ -102,8 +102,15 @@
   </tr>
 </table>
 
+<!-- Naya 7-character image aur Typing SVG link yahan daala hai -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/main/IMG_20260811_161101_5470870172528877044.webp" width="400" alt="Unc Kurup Image" />
+  <img src="https://raw.githubusercontent.com/kurupdevs/githublab/main/IMG_20260811_161101.jpg" width="800" alt="00211914 Profile Views" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/Kurupdevs">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=FF69B4&center=true&vCenter=true&width=435&lines=Typing+SVG+Profile+Views;00211914+Unc+Kurup" alt="Typing SVG" />
+  </a>
 </p>
 
 <picture>
