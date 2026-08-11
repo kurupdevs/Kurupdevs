@@ -88,21 +88,7 @@
 
 ### UNC KURUP
 
-<table align="center">
-  <tr>
-    <td align="center">
-      <img src="https://raw.githubusercontent.com/kurupdevs/Axif27/main/image-1.gif" width="180" alt="Left Warrior" />
-    </td>
-    <td align="center">
-      <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=800&size=28&duration=2800&pause=1000&color=00F5FF&center=true&vCenter=true&width=280&height=85&lines=%E2%9C%A8+KURUP+%E2%9C%A8;AESTHETIC+MODE" alt="Title Card" />
-    </td>
-    <td align="center">
-      <img src="https://raw.githubusercontent.com/kurupdevs/Axif27/main/image.gif" width="180" alt="Right Mask" />
-    </td>
-  </tr>
-</table>
 
-<!-- Naya 7-character image aur Typing SVG link yahan daala hai -->
 <p align="center">
   <img src="https://raw.githubusercontent.com/kurupdevs/githublab/main/IMG_20260811_161101.jpg" width="800" alt="00211914 Profile Views" />
 </p>
