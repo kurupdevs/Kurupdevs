@@ -25,6 +25,8 @@
 
 
  A dawg who is passionate about technologies, open-source, intelligence  convenience etc.
+
+ 
 Tablet / Computer Games
 Electronic Devices Collector
  @rizaldevs & syroannn 
