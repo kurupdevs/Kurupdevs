@@ -1,27 +1,16 @@
-# AFK Module for KurupDevs
-# Sets away-from-keyboard status
+import asyncio
+from pyrogram import Client,filters
 
-import time
-import logging
-from pyrogram import Client, filters
-from pyrogram.types import Message
+AFK={}
 
-logger = logging.getLogger(__name__)
-AFK_DB = {}
+async def setup(c):
+ c.on_message(filters.command("afk",prefixes=".")&filters.me)(h)
+ c.on_message(filters.private&~filters.me)(chk)
 
-@Client.on_message(filters.command("afk", prefixes=".") & filters.me)
-async def afk_handler(client: Client, message: Message):
-    """Handle the afk operation."""
-    reason = message.text.split(None, 1)[1] if len(message.text.split()) > 1 else "Away"
-    AFK_DB[message.from_user.id] = {"reason": reason, "time": time.time()}
-    await message.edit(f"**AFK Mode Active!**\nReason: {reason}")  # Process
+async def h(c,m):
+ r=m.text.split(None,1)[1]if len(m.text.split())>1 else"AFK"
+ AFK[m.from_user.id]=r;await m.edit(f"**AFK:** {r}")
 
-@Client.on_message(filters.private & ~filters.me)
-async def afk_reply(client: Client, message: Message):
-    """Handle afk_reply for incoming messages."""
-    if message.from_user.id in AFK_DB:
-        data = AFK_DB[message.from_user.id]
-        elapsed = int(time.time() - data["time"])
-        mins, hours = elapsed // 60, (elapsed // 60) // 60
-        time_str = f"{hours}h" if hours else f"{mins}m"
-        await message.reply(f"**User is AFK**\nReason: {data['reason']}\nAway: {time_str}")  # Validate
+async def chk(c,m):
+ if m.from_user and m.from_user.id in AFK:
+  await m.reply(f"User is AFK: {AFK[m.from_user.id]}")
