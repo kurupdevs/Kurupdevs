@@ -86,25 +86,27 @@
 
 ---
 
-### UNC KURUP
+### 🌱 Programming Languages
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/kurupdevs/githublab/main/IMG_20260811_161101.jpg" width="800" alt="POWER SPEAR" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/Kurupdevs">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=FF69B4&center=true&vCenter=true&width=435&lines=gentar+aha+power spear+holder;00211914+Unc+Kurup" alt="SYBAU NGA" />
-  </a>
+  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
+  <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white" />
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Batch-4D4D4D?style=for-the-badge&logo=windows-terminal&logoColor=white" />
+  <img src="https://img.shields.io/badge/Shell-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" />
+  <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=white" />
+  <img src="https://img.shields.io/badge/Kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white" />
 </p>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake.svg" />
-  <img alt="git" src="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake.svg" />
-</picture>
-
----
 
 ### 🤮 I HATE Kotlin & Python.
 
@@ -117,6 +119,36 @@
 - <a href="https://github.com/sponsors/Kurupdevs"><img src="https://img.shields.io/badge/GitHub_Sponsors-30363D?style=for-the-badge&logo=github-sponsors&logoColor=white" /></a>
 - <a href="#"><img src="https://img.shields.io/badge/kurup-946CE6?style=for-the-badge&logoColor=white" /></a>
 - <a href="#"><img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" /></a>
+
+---
+
+### 📞 Get in Touch
+
+(Recommended!) You can find my other contacts in my Blog -> <a href="#"><img src="https://img.shields.io/badge/B⁺%20MlgmXyysd's%20Cat%20Nest-FF5733?style=for-the-badge" /></a>
+
+<a href="#"><img src="https://img.shields.io/badge/Telegram%20News%20Channel-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" /></a>
+
+---
+
+### 🖥️ Working Environment
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Windows%2011%20Pro%20Workstation%2024H2-0078D6?style=flat-square&logo=windows&logoColor=white" />
+  <img src="https://img.shields.io/badge/Windows%20Server%202025%20Datacenter%2024H2-0078D6?style=flat-square&logo=windows-server&logoColor=white" />
+  <br/>
+  <img src="https://img.shields.io/badge/Ubuntu%2025.10%20Questing%20Quokka-E95420?style=flat-square&logo=ubuntu&logoColor=white" />
+  <img src="https://img.shields.io/badge/SteamOS%20Holo%203.7.7-1A66FF?style=flat-square&logo=steam&logoColor=white" />
+  <img src="https://img.shields.io/badge/Android%2016%20Baklava-34A853?style=flat-square&logo=android&logoColor=white" />
+  <br/>
+  <img src="https://img.shields.io/badge/Wear%20OS%20by%20Google%206.0-4285F4?style=flat-square&logo=wear-os&logoColor=white" />
+  <img src="https://img.shields.io/badge/iOS%2026.1-000000?style=flat-square&logo=apple&logoColor=white" />
+</p>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake.svg" />
+  <img alt="git" src="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake.svg" />
+</picture>
 
 ---
 
