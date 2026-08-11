@@ -1,8 +1,7 @@
-"""AFK module."""
-from pyrogram import Client,filters
 AFK={}
 
 async def setup(c):
+ from pyrogram import filters
  c.on_message(filters.command("afk",prefixes=".")&filters.me)(h)
  c.on_message(filters.private&~filters.me)(chk)
 

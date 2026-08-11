@@ -7,16 +7,12 @@ _lock=threading.Lock()
 
 def _load(p):
  if not p.exists():return{}
- try:
-  with open(p)as f:return json.load(f)
- except:return{}
+ with open(p)as f:return json.load(f)
 
 def _save(p,d):
- try:
-  t=p.with_suffix(".tmp")
-  with open(t,"w")as f:json.dump(d,f,indent=2)
-  t.rename(p);return True
- except:return False
+ t=p.with_suffix(".tmp")
+ with open(t,"w")as f:json.dump(d,f,indent=2)
+ t.rename(p);return True
 
 def get(col,key,default=None):
  with _lock:

@@ -7,5 +7,5 @@ async def setup(c):
  c.on_message(filters.command("fact",prefixes=".")&filters.me)(fa)
  c.on_message(filters.command("joke",prefixes=".")&filters.me)(jo)
 
-async def fa(c,m):await m.edit(f"Fact: {random.choice(F)}")
-async def jo(c,m):await m.edit(f"Joke: {random.choice(J)}")
+async def fa(c,m):await m.edit(f"**Fact:** {random.choice(F)}")
+async def jo(c,m):await m.edit(f"**Joke:** {random.choice(J)}")
