@@ -22,7 +22,7 @@ app = Client(
 from modules import spam, management, utils
 
 async def main():
-    """Start the bot and keep it running."""
+    """Start the bot and keep it running indefinitely."""
     await app.start()
     print("Bot started successfully")
     await asyncio.Event().wait()
