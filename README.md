@@ -95,7 +95,7 @@
 
 <p align="center">
   <a href="https://github.com/Kurupdevs">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=FF69B4&center=true&vCenter=true&width=435&lines=Typing+SVG+Profile+Views;00211914+Unc+Kurup" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=FF69B4&center=true&vCenter=true&width=435&lines=Typing+SVG+Profile+Views;00211914+Unc+Kurup" alt="SYBAU NGA" />
   </a>
 </p>
 
