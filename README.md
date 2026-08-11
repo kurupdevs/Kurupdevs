@@ -2,17 +2,18 @@
   <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=28&duration=2800&pause=1200&color=FF69B4&center=true&vCenter=true&multiline=true&width=700&height=90&lines=Hi+I'm+Kurup+%F0%9F%9A%80;Tech+Enthusiast+%7C+Indore%2C+India" alt="Typing SVG" />
 </p>
 
-<p align="center">
-  <img src="https://github.com/Kurupdevs.png" width="180" style="border-radius: 50%; border: 3px solid #FF69B4;" />
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Kurupdevs&label=Profile%20Views&color=FF69B4&style=flat" alt="Profile Views" />
-</p>
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=3500&pause=1000&color=FF1493&center=true&vCenter=true&width=650&lines=Building+high-quality+code+with+peak+elite+ball+knowledge" />
-</p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/Kurupdevs.png" width="180" style="border-radius: 50%; border: 3px solid #FF69B4;" />
+    </td>
+    <td align="left">
+      <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=3500&pause=1000&color=FF1493&center=true&vCenter=true&width=420&lines=Building+high-quality+code+with+peak+elite+ball+knowledge" />
+      <br>
+      <img src="https://komarev.com/ghpvc/?username=Kurupdevs&label=Profile%20Views&color=FF69B4&style=flat" alt="Profile Views" />
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -24,7 +25,6 @@
 
 ### 📯 GitHub Analytics
 
-<!-- Languages + Mewtwo side by side -->
 <table align="center">
   <tr>
     <td align="center">
@@ -88,7 +88,6 @@
 
 ### UNC KURUP
 
-<!-- Warrior + Title + Mask side by side -->
 <table align="center">
   <tr>
     <td align="center">
