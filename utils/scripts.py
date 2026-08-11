@@ -1,66 +1,41 @@
-# Utility scripts for KurupDevs
-# Helper functions for common operations
-
-import os
-import sys
-import time
-import logging
+"""Helper scripts for KurupDevs userbot."""
 import asyncio
+import logging
 from typing import Optional
+from pyrogram import Client
+from pyrogram.types import Message
 
 logger = logging.getLogger(__name__)
 
 
-def restart():
-    """Restart the bot process."""
-    logger.info("Restarting bot...")
-    os.execv(sys.executable, [sys.executable] + sys.argv)
+async def progress(current: int, total: int, message: Message, action: str = "Processing"):
+    """Show a progress bar for uploads/downloads."""
+    percent = current * 100 / total
+    bar_len = 20
+    filled = int(bar_len * current / total)
+    bar = "█" * filled + "░" * (bar_len - filled)
+    await message.edit(f"**{action}:** [{bar}] {percent:.1f}%")
 
 
-async def run_command(cmd: str, timeout: int = 30) -> tuple:
-    """Execute run_command with the provided parameters.
-    
-    Args:
-        cmd: Shell command to run.
-        timeout: Maximum execution time in seconds.
-    
-    Returns:
-        Tuple of (return_code, stdout, stderr).
-    """
-    proc = await asyncio.create_subprocess_shell(
-        cmd,
-        stdout=asyncio.subprocess.PIPE,
-        stderr=asyncio.subprocess.PIPE
-    )
+async def safe_edit(message: Message, text: str):
+    """Edit a message safely, catching errors."""
     try:
-        stdout, stderr = await asyncio.wait_for(
-            proc.communicate(), timeout=timeout  # type: ignore
-        )
-        return proc.returncode, stdout.decode(), stderr.decode()
-    except asyncio.TimeoutError:
-        proc.kill()  # Process the request
-        logger.warning("Command timed out: %s", cmd)
-        return -1, "", "Timeout"
+        await message.edit(text)
+    except Exception as e:
+        logger.warning(f"Failed to edit message: {e}")
 
 
-def format_time(seconds: int) -> str:
-    """Handle the format_time operation for this module.
-    
-    Returns:
-        Formatted time string.
-    """
-    minutes, seconds = divmod(seconds, 60)
-    hours, minutes = divmod(minutes, 60)
-    days, hours = divmod(hours, 24)
-    
-    parts = []  # Execute operation
-    if days:
-        parts.append(f"{days}d")
-    if hours:
-        parts.append(f"{hours}h")
-    if minutes:
-        parts.append(f"{minutes}m")
-    if seconds or not parts:
-        parts.append(f"{seconds}s")
-    
-    return " ".join(parts)  # Clean up after
+async def safe_delete(message: Message):
+    """Delete a message safely."""
+    try:
+        await message.delete()
+    except Exception as e:
+        logger.warning(f"Failed to delete message: {e}")
+
+
+def parse_args(text: str, count: int = 2) -> list:
+    """Parse command arguments from message text."""
+    parts = text.split(None, count)
+    if len(parts) > 1:
+        return parts[1:]
+    return []
