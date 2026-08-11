@@ -1,39 +1,28 @@
-# Anti-PM Module for KurupDevs
-# Protects against unwanted private messages
-
-import logging
+"""Anti-PM module for KurupDevs userbot."""
+import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-logger = logging.getLogger(__name__)
-APPROVED_USERS = set()
+PM_BLOCKED = set()
 
-@Client.on_message(filters.private & ~filters.me)
-async def antipm_handler(client: Client, message: Message):
-    """Handle antipm operation for incoming PMs."""
-    user_id = message.from_user.id
-    if user_id not in APPROVED_USERS:
-        await message.reply(
-            "**PM Protection Active!**\n"
-            "You are not approved to message me.\n"
-            "Please wait for approval."  # Handle result
-        )
-        await client.send_message("me", f"#AntiPM\nUser: {message.from_user.mention}\nID: `{user_id}`")
+
+async def setup(client: Client):
+    client.on_message(filters.private & ~filters.me)(check_pm)
+    client.on_message(filters.command("antipm", prefixes=".") & filters.me)(toggle_antipm)
+
+
+async def check_pm(client: Client, message: Message):
+    if message.from_user.id in PM_BLOCKED:
+        await message.reply("**You are blocked from PMs.**")
         return
-    logger.debug("Allowed from approved user: %s", user_id)  # Check
 
-@Client.on_message(filters.command("approve", prefixes=".") & filters.me)
-async def approve_user(client: Client, message: Message):
-    """Approve a user for PM access."""
-    if message.reply_to_message:
-        uid = message.reply_to_message.from_user.id
-        APPROVED_USERS.add(uid)  # Execute
-        await message.edit(f"**User {uid} approved!**")
 
-@Client.on_message(filters.command("revoke", prefixes=".") & filters.me)
-async def revoke_user(client: Client, message: Message):
-    """Handle revoke operation."""
-    if message.reply_to_message:
-        uid = message.reply_to_message.from_user.id
-        APPROVED_USERS.discard(uid)
-        await message.edit(f"**User {uid} revoked!**")  # Cleanup
+async def toggle_antipm(client: Client, message: Message):
+    target = message.reply_to_message.from_user.id if message.reply_to_message else None
+    if target:
+        if target in PM_BLOCKED:
+            PM_BLOCKED.discard(target)
+            await message.edit("**PM unblocked.**")
+        else:
+            PM_BLOCKED.add(target)
+            await message.edit("**PM blocked.**")

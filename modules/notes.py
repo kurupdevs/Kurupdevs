@@ -1,40 +1,44 @@
-# Notes Module for KurupDevs
-import logging
+"""Notes module for KurupDevs userbot."""
+import json
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-logger = logging.getLogger(__name__)
-NOTES_DB = {}
+NOTES_FILE = "notes.json"
 
-@Client.on_message(filters.command("save", prefixes=".") & filters.me)
-async def save_note(client: Client, message: Message):
-    args = message.text.split(None, 1)
-    if len(args) < 2:
+
+def _load():
+    try:
+        with open(NOTES_FILE) as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def _save(notes):
+    with open(NOTES_FILE, "w") as f:
+        json.dump(notes, f, indent=2)
+
+
+async def setup(client: Client):
+    client.on_message(filters.command("save", prefixes=".") & filters.me)(save_cmd)
+    client.on_message(filters.command("get", prefixes=".") & filters.me)(get_cmd)
+
+
+async def save_cmd(client: Client, message: Message):
+    args = message.text.split(None, 2)
+    if len(args) < 3:
         await message.edit("**Usage:** `.save <name> <content>`")
         return
-    name = args[1].split()[0]
-    content = args[1][len(name):].strip()
-    if message.reply_to_message:
-        content = message.reply_to_message.text or content
-    NOTES_DB[name] = content  # Validate
-    await message.edit(f"**Note `{name}` saved!**")
+    notes = _load()
+    notes[args[1]] = args[2]
+    _save(notes)
+    await message.edit(f"**Saved:** `{args[1]}`")
 
-@Client.on_message(filters.command("get", prefixes=".") & filters.me)
-async def get_note(client: Client, message: Message):
+
+async def get_cmd(client: Client, message: Message):
     args = message.text.split(None, 1)
     if len(args) < 2:
         await message.edit("**Usage:** `.get <name>`")
         return
-    name = args[1].strip()
-    if name in NOTES_DB:
-        await message.edit(f"**{name}:**\n{NOTES_DB[name]}")  # Result
-    else:
-        await message.edit(f"**Note `{name}` not found.**")
-
-@Client.on_message(filters.command("notes", prefixes=".") & filters.me)
-async def list_notes(client: Client, message: Message):
-    if not NOTES_DB:
-        await message.edit("**No notes saved.**")
-        return
-    nl = "\n".join(f"• `{n}`" for n in sorted(NOTES_DB))
-    await message.edit(f"**📝 Notes:**\n{nl}")  # Execute
+    notes = _load()
+    await message.edit(notes.get(args[1], "Not found."))
