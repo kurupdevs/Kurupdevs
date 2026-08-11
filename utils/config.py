@@ -9,6 +9,7 @@ except (FileNotFoundError, ImportError):
     env = None
 
 def _get(key, default=None):
+    """Retrieve config value from env with fallback."""
     val = os.getenv(key)
     if val is not None:
         return val
@@ -16,7 +17,7 @@ def _get(key, default=None):
         try:
             return env.str(key)
         except Exception:
-            pass
+            pass  # intentionally suppressed
     return default
 
 api_id = int(_get("API_ID", "0"))
