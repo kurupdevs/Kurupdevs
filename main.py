@@ -1,76 +1,42 @@
-"""
-KurupDevs - All-in-One Telegram Bot v3.0
-Spam + Management + Fun + Utility + Stickers 
-+Extra
-Made by @kurupdevs
-"""
+#
+# Kurupdevs Telegram Userbot
+# Copyright (C) 2020-present Kurup
+#
+# Core entry point for the userbot application
+#
 
-import asyncio
-import importlib
-import logging
 import os
-import platform
-from pathlib import Path
+import logging
+import asyncio
 
-from pyrogram import Client, idle
-from pyrogram.enums import ParseMode
+from pyrogram import Client, filters, idle
 
-from utils import config, prefix
-from utils.db import db
+# Core configuration
+from config import API_ID, API_HASH, BOT_TOKEN
+from utils.loader import load_modules
 
-SCRIPT_PATH = os.path.dirname(os.path.realpath(__file__))
-if SCRIPT_PATH != os.getcwd():
-    os.chdir(SCRIPT_PATH)
-
-app = Client(
-    "kurupdevs_session",
-    api_id=config.api_id,
-    api_hash=config.api_hash,
-    session_string=config.session_string or None,
-    device_model="KurupDevs Bot",
-    app_version="3.0",
-    system_version=platform.version() + " " + platform.machine(),
-    parse_mode=ParseMode.HTML,
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
 )
-
-
-async def load_all_modules():
-    SUCCESS = 0
-    FAILED = 0
-    logging.info("Loading modules...")
-    for path in sorted(Path("modules").rglob("*.py")):
-        if path.stem == "__init__" or "custom_modules" in str(path):
-            continue
-        try:
-            importlib.import_module(f"modules.{path.stem}")
-            SUCCESS += 1
-            logging.info(f"  Loaded: {path.stem}")  # Log event
-        except Exception as e:
-            FAILED += 1
-            logging.warning(f"  Failed {path.stem}: {e}")
-    logging.info(f"Loaded {SUCCESS} modules ({FAILED} failed)")
+logger = logging.getLogger(__name__)
 
 
 async def main():
-    logging.basicConfig(
-        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-        handlers=[logging.FileHandler("kurupdevs.log"), logging.StreamHandler()],
-        level=logging.INFO,
+    """Initialize and start the userbot client."""
+    app = Client(
+        "kurupdevs",
+        api_id=API_ID,
+        api_hash=API_HASH,
+        bot_token=BOT_TOKEN,
     )
-
-    print(r"""
-    +==========================================+
-    |     KurupDevs All-in-One Bot v3.0       |
-    |    Telegram Userbot by @kurupdevs        |
-    |    github.com/kurupdevs/KurupDevs        |
-    +==========================================+
-    """)
-
+    
+    # Load all modules dynamically
+    await load_modules(app)
+    
     await app.start()
-    me = await app.get_me()
-    logging.info(f"Logged in as {me.first_name} (@{me.username or 'N/A'})")
-    await load_all_modules()
-    logging.info(f"KurupDevs Ready! Prefix: {prefix}")
+    logger.info("Kurupdevs Userbot started successfully!")
+    
     await idle()
     await app.stop()
 

@@ -1,10 +1,6 @@
-pyrogram>=2.0.0
-humanize
-environs
+pyrofork
+python-dotenv
 aiohttp
-pyfiglet
-requests
-pillow
+aiofiles
 psutil
-asyncio
-pymongo
+bottle
