@@ -82,13 +82,11 @@
 ###  UNC KURUP
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/94.gif"
-       width="180"
-       alt="Gengar" />
+  <img src="https://raw.githubusercontent.com/kurupdevs/Axif27/main/image-1.gif" width="200" alt="Left Warrior" />
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/94.gif"
-       width="180"
-       alt="Gengar" />
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=800&size=30&duration=2800&pause=1000&color=00F5FF&center=true&vCenter=true&width=320&height=85&lines=%E2%9C%A8+KURUP+%E2%9C%A8;AESTHETIC+MODE" alt="Title Card" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/kurupdevs/Axif27/main/image.gif" width="200" alt="Right Mask" />
 </p>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake-dark.svg" />
