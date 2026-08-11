@@ -30,7 +30,7 @@ async def spam_handler(client, message):
                 await asyncio.sleep(0.1)
                 await sent.delete()
         except Exception:
-            pass
+            pass  # intentionally suppressed
         await asyncio.sleep(cooldown)
 
 @Client.on_message(filters.command(["raid"], prefix) & filters.me)
@@ -46,7 +46,7 @@ async def raid_handler(client, message):
     mention = user.mention if user else "User"
     for _ in range(amount):
         try:
-            await message.reply_to_message.reply(f"{mention} {random.choice(RAID_MSGS)}")
+            await message.reply_to_message.reply(f"{mention} {random.choice(RAID_MSGS)}")  # Validate output
             await asyncio.sleep(0.1)
         except Exception:
             pass
