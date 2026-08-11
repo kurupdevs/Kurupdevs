@@ -16,7 +16,7 @@
 
 ---
 
-- -yey  Currently in **12th** with deep passion for **Technology & Open Source**
+- -yey Currently in **12th** with deep passion for **Technology & Open Source**
 - Love building efficient & high-quality code while continuously learning
 - Current focus → Mastering **Python** + Open Source contributions
 
@@ -24,13 +24,20 @@
 
 ### 📯 GitHub Analytics
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/150.gif" width="140" alt="Mewtwo" />
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Kurupdevs&layout=compact&theme=radical&hide_border=true" height="160" alt="Most Used Languages" />
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/150.gif" width="140" alt="Mewtwo" />
-</p>
+<!-- Languages + Mewtwo side by side -->
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/150.gif" width="140" alt="Mewtwo" />
+    </td>
+    <td align="center">
+      <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Kurupdevs&layout=compact&theme=radical&hide_border=true" height="160" alt="Most Used Languages" />
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/150.gif" width="140" alt="Mewtwo" />
+    </td>
+  </tr>
+</table>
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Kurupdevs&theme=github&bg_color=1a0b1a&color=FF69B4&line=FF1493&point=FF69B4&area=true&area_color=FF69B4&hide_border=true" width="100%" />
@@ -42,7 +49,7 @@
 
 ---
 
-###  Let's Connect with unc kurup
+### Let's Connect with unc kurup
 
 <p align="center">
   <a href="https://github.com/Kurupdevs">
@@ -64,7 +71,7 @@
 
 ---
 
-### 🌀 Languages & Tools I USUALLY USE🌀
+### 🌀 Languages & Tools I USUALLY USE 🌀
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
@@ -79,15 +86,23 @@
 
 ---
 
-###  UNC KURUP
+### UNC KURUP
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/kurupdevs/Axif27/main/image-1.gif" width="200" alt="Left Warrior" />
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=800&size=30&duration=2800&pause=1000&color=00F5FF&center=true&vCenter=true&width=320&height=85&lines=%E2%9C%A8+KURUP+%E2%9C%A8;AESTHETIC+MODE" alt="Title Card" />
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/kurupdevs/Axif27/main/image.gif" width="200" alt="Right Mask" />
-</p>
+<!-- Warrior + Title + Mask side by side -->
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/kurupdevs/Axif27/main/image-1.gif" width="180" alt="Left Warrior" />
+    </td>
+    <td align="center">
+      <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=800&size=28&duration=2800&pause=1000&color=00F5FF&center=true&vCenter=true&width=280&height=85&lines=%E2%9C%A8+KURUP+%E2%9C%A8;AESTHETIC+MODE" alt="Title Card" />
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/kurupdevs/Axif27/main/image.gif" width="180" alt="Right Mask" />
+    </td>
+  </tr>
+</table>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake.svg" />
