@@ -1,15 +1,29 @@
-import os,asyncio,logging
+# KurupDevs - Main Bot Entry Point
+# All-in-one Telegram bot
+
+import os
+import sys
+import asyncio
 from pyrogram import Client
 
-logging.basicConfig(level=logging.INFO,format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-logger=logging.getLogger(__name__)
+# Bot configuration
+API_ID = int(os.environ.get("API_ID", "0"))
+API_HASH = os.environ.get("API_HASH", "")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
-app=Client("kurupdevs",api_id=int(os.getenv("API_ID","0")),api_hash=os.getenv("API_HASH",""))
 
 async def main():
- logger.info("Starting KurupDevs...")
- await app.start()
- logger.info("KurupDevs running!")
- await asyncio.Event().wait()
+    """Main entry point for the bot"""
+    app = Client(
+        "KurupDevs",
+        api_id=API_ID,
+        api_hash=API_HASH,
+        bot_token=BOT_TOKEN,
+    )
 
-if __name__=="__main__":asyncio.run(main())
+    await app.start()
+    print("Bot is running...")
+    await asyncio.Event().wait()
+
+if __name__ == "__main__":
+    asyncio.run(main())
