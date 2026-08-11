@@ -1,0 +1,1 @@
+{"name":"KurupDevs","description":"A simple, fast, and lightweight Telegram Userbot","repository":"https://github.com/kurupdevs/Kurupdevs","env":{"API_ID":{"description":"API ID","required":true},"API_HASH":{"description":"API Hash","required":true}}}
