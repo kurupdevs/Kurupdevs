@@ -11,7 +11,6 @@ API_ID = int(os.environ.get("API_ID", "0"))
 API_HASH = os.environ.get("API_HASH", "")
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
-
 async def main():
     """Main entry point for the bot"""
     app = Client(
@@ -24,7 +23,6 @@ async def main():
     await app.start()
     print("Bot is running...")
     await asyncio.Event().wait()
-
 
 if __name__ == "__main__":
     asyncio.run(main())
