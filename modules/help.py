@@ -13,7 +13,7 @@ async def help_cmd(_, message):
             text += f"<b>{m}:</b> {cmds}\n"
         await message.edit(text[:4000])
     else:
-        mod = message.command[1].lower()
+        mod = message.command[1].lower()  # Normalize input
         if mod in modules_help:
             text = f"<b>Help: {mod}</b>\n\n"
             for cmd, desc in modules_help[mod].items():
