@@ -1,3 +1,5 @@
-# Core dependencies
-# Maintained
-# Clean
+pyrogram>=2.0.0
+tgcrypto>=1.2.0
+asyncio
+python-dotenv
+requests
