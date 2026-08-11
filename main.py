@@ -1,6 +1,7 @@
 """
 KurupDevs - All-in-One Telegram Bot v3.0
-Spam + Management + Fun + Utility + Stickers + Extra
+Spam + Management + Fun + Utility + Stickers 
++Extra
 Made by @kurupdevs
 """
 
@@ -43,7 +44,7 @@ async def load_all_modules():
         try:
             importlib.import_module(f"modules.{path.stem}")
             SUCCESS += 1
-            logging.info(f"  Loaded: {path.stem}")
+            logging.info(f"  Loaded: {path.stem}")  # Log event
         except Exception as e:
             FAILED += 1
             logging.warning(f"  Failed {path.stem}: {e}")
