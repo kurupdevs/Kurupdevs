@@ -1,13 +1,11 @@
-"""Fun module."""
 import random
-from pyrogram import Client,filters
-
-FACTS=["Honey never spoils.","A day on Venus > year on Venus.","Bananas are berries."]
-JOKES=["Why atoms? They make up everything!","Fake spaghetti? Impasta!"]
+F=["Honey never spoils.","A day on Venus > year on Venus.","Octopuses have 3 hearts."]
+J=["Why atoms? They make up everything!","Fake spaghetti? Impasta!"]
 
 async def setup(c):
- c.on_message(filters.command("fact",prefixes=".")&filters.me)(f)
- c.on_message(filters.command("joke",prefixes=".")&filters.me)(j)
+ from pyrogram import filters
+ c.on_message(filters.command("fact",prefixes=".")&filters.me)(fa)
+ c.on_message(filters.command("joke",prefixes=".")&filters.me)(jo)
 
-async def f(c,m):await m.edit(f"**Fact:** {random.choice(FACTS)}")
-async def j(c,m):await m.edit(f"**Joke:** {random.choice(JOKES)}")
+async def fa(c,m):await m.edit(f"Fact: {random.choice(F)}")
+async def jo(c,m):await m.edit(f"Joke: {random.choice(J)}")
