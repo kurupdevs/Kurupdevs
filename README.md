@@ -86,7 +86,7 @@
 
 ---
 
-### 🌱 Programming Languages
+###  Programming Languages
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/kurupdevs/githublab/main/IMG_20260811_161101.jpg" width="800" alt="POWER SPEAR" />
@@ -112,7 +112,7 @@
 
 ---
 
-### 💰 Buy me a Coffee
+### 💅 Buy me a Coffee
 
 ✨ If you like my projects, you can buy me a coffee at:
 
@@ -122,7 +122,7 @@
 
 ---
 
-### 📞 Get in Touch
+###  Get in Touch )
 
 (Recommended!) You can find my other contacts in my Blog -> <a href="#"><img src="https://img.shields.io/badge/B⁺%20MlgmXyysd's%20Cat%20Nest-FF5733?style=for-the-badge" /></a>
 
@@ -130,7 +130,7 @@
 
 ---
 
-### 🖥️ Working Environment
+###  Working Environment
 
 <p align="center">
   <img src="https://img.shields.io/badge/Windows%2011%20Pro%20Workstation%2024H2-0078D6?style=flat-square&logo=windows&logoColor=white" />
@@ -144,12 +144,51 @@
   <img src="https://img.shields.io/badge/iOS%2026.1-000000?style=flat-square&logo=apple&logoColor=white" />
 </p>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake.svg" />
-  <img alt="git" src="https://raw.githubusercontent.com/Kurupdevs/Kurupdevs/output/github-contribution-grid-snake.svg" />
-</picture>
+---
+
+### 🏳️‍⚧️ Cumputer / Demoboard
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Asus%20ExpertPad%20B3200DQ2A-000000?style=flat-square&logo=asus&logoColor=white" />
+  <img src="https://img.shields.io/badge/Funhouse%20F10%20MPro%20i3%2016G-333333?style=flat-square" />
+  <img src="https://img.shields.io/badge/Intel%20NUC%20NUC8i7HVK-0078D6?style=flat-square&logo=intel&logoColor=white" />
+  <br/>
+  <img src="https://img.shields.io/badge/Intel%20NUC%20NUC7i7DNHE-0078D6?style=flat-square&logo=intel&logoColor=white" />
+  <img src="https://img.shields.io/badge/Intel%20Compute%20Stick%20STK2mv64CC-0078D6?style=flat-square&logo=intel&logoColor=white" />
+  <br/>
+  <img src="https://img.shields.io/badge/Lenovo%20Legion%20Y9000P%20IAH7H%20%2F%205%20Pro%2016IAH7H%20%2882RF%20%2F%20i7%20%2F%203070%20Ti%29-FF0000?style=flat-square&logo=lenovo&logoColor=white" />
+  <br/>
+  <img src="https://img.shields.io/badge/Microsoft%20Surface%20Book%203%20for%20Business%20i7%20RTX%2032G-666666?style=flat-square&logo=microsoft&logoColor=white" />
+  <img src="https://img.shields.io/badge/Microsoft%20Surface%20Pro%209%20for%20Business%20i7%2032G-666666?style=flat-square&logo=microsoft&logoColor=white" />
+  <br/>
+  <img src="https://img.shields.io/badge/Microsoft%20Surface%20Pro%204%20i7%2016G-666666?style=flat-square&logo=microsoft&logoColor=white" />
+  <img src="https://img.shields.io/badge/MoreFine%20M8S-000000?style=flat-square" />
+  <img src="https://img.shields.io/badge/NINGMEI%20CR160R-FF0000?style=flat-square" />
+  <img src="https://img.shields.io/badge/Steam%20Deck%20OLED-1A66FF?style=flat-square&logo=steam&logoColor=white" />
+  <br/>
+  <img src="https://img.shields.io/badge/NXP%20i.MX7D%20Android%20Things%20Starter%20Kit-00C853?style=flat-square" />
+  <img src="https://img.shields.io/badge/Raspberry%20Pi%205%2016G-A22846?style=flat-square&logo=raspberrypi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Raspberry%20Pi%203%20Model%20B+-A22846?style=flat-square&logo=raspberrypi&logoColor=white" />
+  <br/>
+  <img src="https://img.shields.io/badge/Raspberry%20Pi%203%20Model%20B-A22846?style=flat-square&logo=raspberrypi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Raspberry%20Pi%20Zero%20WH-A22846?style=flat-square&logo=raspberrypi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Raspberry%20Pi%20Zero%20WH-A22846?style=flat-square&logo=raspberrypi&logoColor=white" />
+  <br/>
+  <img src="https://img.shields.io/badge/Raspberry%20Pi%20Pico%202%20WH-A22846?style=flat-square&logo=raspberrypi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Raspberry%20Pi%20Pico%202%20WH-A22846?style=flat-square&logo=raspberrypi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Raspberry%20Pi%20Pico%202-A22846?style=flat-square&logo=raspberrypi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Raspberry%20Pi%20Pico%20WH-A22846?style=flat-square&logo=raspberrypi&logoColor=white" />
+  <br/>
+  <img src="https://img.shields.io/badge/Raspberry%20Pi%20Pico%20W-A22846?style=flat-square&logo=raspberrypi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Raspberry%20Pi%20Pico-A22846?style=flat-square&logo=raspberrypi&logoColor=white" />
+  <img src="https://img.shields.io/badge/BBC%20Micro%3Abit-00E04D?style=flat-square&logo=bbc&logoColor=white" />
+  <img src="https://img.shields.io/badge/M5Stack%20Stick%20C-00AEEF?style=flat-square" />
+  <img src="https://img.shields.io/badge/M5Stack%20Stick%20V-00AEEF?style=flat-square" />
+</p>
 
 ---
 
-### 💫 there is a light and it never goes out- nigga
+###  Public Keys
+
+```text
+Fingerprint = 1800 8735 78B1 374C 364D 1983 1144 6379 AC55 C869
