@@ -105,14 +105,6 @@ I'm 17 and in 12th grade. I write Telegram userbots and bots, mostly in Python. 
 
 ---
 
-### 💅 Buy me a coffee
-
-If you like my projects, you can support me here:
-
-- <a href="https://github.com/sponsors/Kurupdevs"><img src="https://img.shields.io/badge/GitHub_Sponsors-30363D?style=for-the-badge&logo=github-sponsors&logoColor=white" /></a>
-
----
-
 ### Get in touch
 
 <a href="https://t.me/deepthrift"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" /></a>
