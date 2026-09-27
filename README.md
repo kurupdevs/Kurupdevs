@@ -33,7 +33,7 @@ I'm 17 and in 12th grade. I write Telegram userbots and bots, mostly in Python. 
 
 - [KURUPUSERBOT](https://github.com/kurupdevs/KURUPUSERBOT) — fast, lightweight Telegram userbot with 26 built-in modules, a web dashboard and AI integrations.
 - [dragon-userbot](https://github.com/kurupdevs/dragon-userbot) — simple, fast, lightweight and highly customizable Telegram userbot.
-- [Telegram-Userbot](https://github.com/kurupdevs/Telegram-Userbot) — Telegram userbot built with Telethon.
+- [SYBAUUPI](https://github.com/kurupdevs/SYBAUUPI) — full-stack web app built with React, TanStack Start and shadcn/ui.
 - [SESSIONHACK](https://github.com/kurupdevs/SESSIONHACK) — Telegram session manager bot.
 - [githublab](https://github.com/kurupdevs/githublab) — experimental Telegram bot lab for testing and prototyping.
 
