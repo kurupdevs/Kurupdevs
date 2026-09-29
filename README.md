@@ -17,6 +17,8 @@
 
 ---
 
+**Ayush** · 17 y/o developer from **Indore, India** — building open-source software: [KuruBeats](https://github.com/kurupdevs/KuruBeats), KURUPUSERBOT & more.
+
 - -Hi there 👋 This... It's me? Okay.
 - yey Currently in **12th** with deep passion for **Technology & Open Source**
 - Love building efficient & high-quality code while continuously learning
